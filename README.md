@@ -9,7 +9,7 @@ Do congenital heart disease (CHD) and chronic kidney disease (CKD) share genetic
 organs at once, the apparent link disappears. What *does* share genetics with CHD is
 congenital kidney *malformation*, and the mechanism is ciliary.
 
-Everything here uses **public data only**. No UK Biobank application, no dbGaP, no login.
+Everything here uses **public data only**.
 
 > **Note on data versions.** This project has been re-analysed using the most recent releases of every resource available at the time of analysis (HPO 2026-06-23, gnomAD v4.1, MANE v1.5, FinnGen R10, MAGMA v1.10), rather than the versions current when the project was first conceived. Version numbers are stated throughout the thesis and in `docs/research_project_1.tex` Table 2 so that every result is exactly reproducible.
 
@@ -128,20 +128,6 @@ methods diagrams.
 
 ---
 
-## About `code/regenie_ukb/`
-
-This folder holds a complete regenie pipeline for UK Biobank: phenotype derivation with the
-CKD-EPI 2021 equations, covariate construction, mask building, and a results parser with
-guards against sparse-data artefacts.
-
-**It was never run.** It requires individual-level UK Biobank access, which this project does
-not have. It is kept because the gene sets and analysis logic are access-independent and it
-would be the right pipeline if access were obtained. **UK Biobank applications are currently
-paused** pending changes to their Research Analysis Platform.
-
-The Python scripts in that folder were tested against synthetic data. The shell scripts pass
-`bash -n` but have never been run against real regenie.
-
 ---
 
 ## Honest limitations
@@ -175,8 +161,6 @@ These are stated fully in the Discussion of the thesis. The short version:
 | FinnGen | Release 10 | Direct download, no form |
 | 1000 Genomes EUR panel | Phase 3 | Open |
 
-FinnGen R10 summary statistics are directly downloadable from Google Cloud Storage without
-the registration form that later releases require. That is what made the LD score regression
-possible.
+
 
 ---
