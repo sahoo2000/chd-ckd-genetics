@@ -22,12 +22,16 @@ Everything here uses **public data only**.
 |---|---|
 | CHD to kidney malformation, adjusted for pleiotropy | OR 1.77 (1.52–2.07), p = 3.1e-13 |
 | CHD to chronic kidney disease, adjusted for pleiotropy | **OR 0.95 (0.73–1.23), p = 0.68** |
-| Genetic correlation, kidney function vs CHD | **rg = −0.03, p = 0.67** |
-| Genetic correlation, kidney function vs CKD (positive control) | rg = −0.36, p = 6.1e-11 |
+| Genetic correlation, kidney function vs CHD | **rg = −0.05, p = 0.58** |
+| Genetic correlation, kidney function vs CKD (positive control) | rg = −0.36, p = 2.0e-10 |
 | Excess of rare-variant hits at p<0.001, ciliary genes | 9.7× |
 | Direction of those hits | 59/60 toward worse kidney function, p = 5.3e-17 |
+| Mendelian randomisation, CHD → kidney function | **IVW −0.0009 (−0.0029, +0.0012), p = 0.41** |
+| MR negative control, kidney function → CHD | **+0.234 (−0.657, +1.124), p = 0.61** |
+| Doubly robust, CHD → kidney malformation | +3.8 points (1.3, 6.4), p = 0.003 |
+| Doubly robust, CHD → CKD | **−0.3 points, p = 0.66** |
 
-The full write-up is [`docs/research_project_1.pdf`](docs/research_project_1.pdf) — 33 pages, 16 figures, with declaration, acknowledgements, lists of figures and tables, a graphical abstract and five supplementary sections.
+The full write-up is [`docs/research_project_1.pdf`](docs/research_project_1.pdf) — 36 pages, 17 figures, with declaration, acknowledgements, lists of figures and tables, a graphical abstract and five supplementary sections.
 
 ---
 
@@ -118,6 +122,23 @@ already known, and whether the direction of effect is consistent.
 and no longer installs, so this reimplements the published estimator. **It was validated
 against a published heritability estimate and a positive control before use, but it is not
 the reference binary — say so if you publish this.**
+
+**`10_mendelian_randomisation.py`** — asks whether congenital heart disease *causes* worse
+kidney function, using genetic variants as a natural experiment. FinnGen CHD is the exposure
+and CKDGen eGFR the outcome. **It deliberately does not use FinnGen's own CKD GWAS as the
+outcome**, because exposure and outcome would then come from the same people and weak
+instruments would drag the answer back towards the confounded observational association.
+Runs IVW, weighted median, MR-Egger, Cochran's Q, leave-one-out and Steiger, reports the
+minimum detectable effect, and runs the biologically impossible reverse direction as a
+negative control. Only 2 instruments survive at genome-wide significance, so the result is a
+bound, not a demonstration.
+
+**`11_causal_sensitivity_ml.py`** — tests two assumptions behind the pleiotropy adjustment
+using AIPW with gradient-boosting nuisance models and five-fold cross-fitting. **The machine
+learning is not used for prediction and no accuracy is reported** — it is only a flexible
+description of the confounders inside an estimator targeting the same causal contrast. The
+cardiovascular and genitourinary organ systems are excluded from every adjustment set,
+because one is the exposure and the other is the outcome.
 
 **`07_make_figures.py`** — draws the 11 data figures.
 

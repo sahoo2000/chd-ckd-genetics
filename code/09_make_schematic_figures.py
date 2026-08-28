@@ -413,6 +413,127 @@ def methods_figure_funnel():
     save(fig, "figM2_gene_filtering.png")
 
 
+
+def blocking_mark(ax, x1, y1, x2, y2, position, colour):
+    """Draw a short bar straight across an arrow, meaning "this path is shut".
+
+    We work out the direction the arrow points, then draw a line at right
+    angles to it. Swapping the two numbers over and flipping one sign is the
+    standard trick for turning a direction into the direction at right angles
+    to it.
+    """
+    along_x = x2 - x1
+    along_y = y2 - y1
+    length = (along_x ** 2 + along_y ** 2) ** 0.5
+    across_x = -along_y / length
+    across_y = along_x / length
+
+    centre_x = x1 + along_x * position
+    centre_y = y1 + along_y * position
+    half = 0.045
+    ax.plot([centre_x - across_x * half, centre_x + across_x * half],
+            [centre_y - across_y * half, centre_y + across_y * half],
+            color=colour, linewidth=2.4, solid_capstyle="round", zorder=8)
+
+
+def causal_dag_figure():
+    """Draws the causal diagram behind the pleiotropy adjustment.
+
+    A causal diagram (a DAG) is just boxes with arrows saying what causes
+    what. It is worth drawing because it makes clear WHY we adjust for the
+    number of organ systems a disease affects, rather than that step looking
+    like an arbitrary statistical tweak.
+
+    Panel (a) is the problem. Panel (b) is what adjusting does about it.
+
+    Layout note: the proxy box sits beside the confounder rather than below
+    everything, so that nothing has to cross the arrow in the middle.
+    """
+    fig, axes = plt.subplots(1, 2, figsize=(11.4, 3.9))
+
+    for panel_index in range(len(axes)):
+        ax = axes[panel_index]
+        blank_axes(ax)
+        ax.set_xlim(0, 1)
+        # The drawing only uses the top part of the square, so we crop the
+        # empty band underneath instead of leaving a big gap.
+        ax.set_ylim(0.16, 1.0)
+
+        adjusted = (panel_index == 1)
+
+        if adjusted:
+            title = "(b)  Adjusted: the shared path is blocked"
+        else:
+            title = "(a)  Unadjusted: both paths are open"
+        ax.text(0.5, 0.99, title, ha="center", va="top",
+                fontsize=9.5, color=INK, weight="bold")
+
+        # --- the confounder, top left ---
+        confounder_colours = STONE if adjusted else SAND
+        box(ax, 0.02, 0.70, 0.45, 0.16,
+            "Developmental gene disrupted\n(a syndromic, pleiotropic gene)",
+            confounder_colours, fontsize=8.0)
+
+        # --- what we actually measure, top right ---
+        proxy_colours = SAGE if adjusted else STONE
+        box(ax, 0.60, 0.70, 0.38, 0.16,
+            "Measured proxy:\norgan systems affected,\nnumber of HPO terms",
+            proxy_colours, fontsize=7.8)
+
+        # Short dashed link between the proxy and the thing it stands for.
+        ax.plot([0.595, 0.475], [0.78, 0.78], color=proxy_colours[1],
+                linewidth=1.1, linestyle=(0, (2, 2.5)), zorder=1)
+        if adjusted:
+            link_words = "conditioned on"
+        else:
+            link_words = "stands in for"
+        # The gap between the two boxes is narrower than the words, so the
+        # label goes underneath them rather than between them.
+        ax.text(0.535, 0.675, link_words, ha="center", va="top",
+                fontsize=6.8, color=proxy_colours[1], style="italic")
+
+        # --- the two organ outcomes, along the bottom ---
+        box(ax, 0.02, 0.30, 0.40, 0.15, "Cardiac\nmalformation",
+            ROSE, fontsize=8.5, bold=True)
+        box(ax, 0.58, 0.30, 0.40, 0.15, "Kidney\nphenotype",
+            TEAL, fontsize=8.5, bold=True)
+
+        # --- the confounding path: one arrow down to each organ ---
+        if adjusted:
+            backdoor_colour = HAIRLINE
+            backdoor_width = 1.0
+        else:
+            backdoor_colour = SAND[1]
+            backdoor_width = 2.0
+
+        arrow(ax, 0.16, 0.695, 0.20, 0.458, colour=backdoor_colour, width=backdoor_width)
+        arrow(ax, 0.40, 0.695, 0.74, 0.458, colour=backdoor_colour, width=backdoor_width)
+
+        if adjusted:
+            blocking_mark(ax, 0.16, 0.695, 0.20, 0.458, 0.5, SAGE[1])
+            blocking_mark(ax, 0.40, 0.695, 0.74, 0.458, 0.5, SAGE[1])
+        else:
+            ax.text(0.325, 0.60, "confounding\npath", ha="center", va="center",
+                    fontsize=7.2, color=SAND[1], style="italic", linespacing=1.4)
+
+        # --- the effect we actually want to estimate ---
+        if adjusted:
+            effect_colour = SAGE[1]
+        else:
+            effect_colour = HAIRLINE
+        arrow(ax, 0.432, 0.375, 0.568, 0.375, colour=effect_colour, width=1.8)
+        ax.text(0.50, 0.255, "the effect\nwe want", ha="center", va="top",
+                fontsize=7.2, color=effect_colour, style="italic", linespacing=1.4)
+
+    fig.text(0.5, 0.055,
+             "The adjusted odds ratio is a causal quantity only if the measured proxy fully captures the shared developmental\n"
+             "path. It is a stand-in, not the confounder itself, so some residual confounding should be expected.",
+             ha="center", fontsize=7.8, color=MUTED, style="italic", linespacing=1.7)
+
+    fig.subplots_adjust(bottom=0.20, top=0.96, wspace=0.09)
+    save(fig, "figM3_causal_dag.png")
+
+
 # ======================================================================
 
 if __name__ == "__main__":
@@ -422,4 +543,5 @@ if __name__ == "__main__":
     intro_figure_pleiotropy()
     methods_figure_workflow()
     methods_figure_funnel()
+    causal_dag_figure()
     print("Done.")

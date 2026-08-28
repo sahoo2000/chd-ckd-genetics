@@ -175,6 +175,15 @@ Cross-trait LD score regression using CKDGen ($n \approx 981{,}000$) and FinnGen
 ($r_g = -0.05$, $p = 0.58$) against a positive control of $r_g = -0.36$
 ($p = 2.0 \times 10^{-10}$) for eGFR and CKD.
 
+Two further causal analyses were added. Two-sample Mendelian randomisation, using FinnGen
+CHD as exposure and CKDGen eGFR as outcome, found no causal effect (IVW $-0.0009$, 95\% CI
+$-0.0029$ to $+0.0012$, $p = 0.41$) but could only exclude effects larger than 0.0029 at 80\%
+power, and a biologically impossible reverse direction returned null as required. Doubly
+robust estimation with machine-learning nuisance models showed the kidney-malformation
+association is robust to functional form ($+3.8$ percentage points, $p = 0.003$) but not to
+adjusting for organ-system identity, where a 13\% positivity violation makes the comparison
+unreliable. The null result for CKD was stable across every specification.
+
 The conclusion is that CHD and CKD do not share Mendelian genetic architecture once
 syndromic pleiotropy is accounted for. The genuine shared axis is between CHD and congenital
 anomalies of the kidney and urinary tract, mediated by ciliary biology.
@@ -299,7 +308,7 @@ Table~\ref{tab:versions} lists every external resource with its version and acce
 \caption{External data resources, versions and access routes. All are public; none required
 an application.}
 \label{tab:versions}
-\begin{tabular}{llll}
+\begin{tabular}{@{}l l p{4.6cm} l@{}}
 \toprule
 Resource & Version / release & Content used & Access \\
 \midrule
@@ -308,8 +317,8 @@ HPO annotations & 2026-06-23 & 332,599 gene--phenotype rows & Open (PURL) \\
 HGNC complete set & current & symbols, locus type, location & Open \\
 MANE Select & v1.5 & GRCh38 gene coordinates & NCBI FTP \\
 gnomAD constraint & v4.1 & pLI, LOEUF (MANE transcripts) & Google Cloud \\
-Genebass & 394,841 UKB exomes & SKAT-O, burden, ACAT & Open API \\
-CKDGen (Stanzick 2021) & European ancestry & eGFR, 8.84M variants & Direct download \\
+Genebass & 394,841 exomes & SKAT-O, burden, ACAT & Open API \\
+CKDGen (Stanzick 2021) & European & eGFR, 8.84M variants & Direct download \\
 FinnGen & Release 10 & CHD, CKD, cystic kidney & Direct download \\
 1000 Genomes & Phase 3, EUR & LD reference for MAGMA & CTG Lab \\
 LD scores & \texttt{eur\_w\_ld\_chr} & 1,290,028 HapMap 3 SNPs & Zenodo \\
@@ -364,6 +373,53 @@ total number of annotated terms. Logistic regression was then fitted:
 
 where $\exp(\beta_1)$ is the adjusted odds ratio of interest. The same model was fitted
 separately for each of twelve specific cardiac lesions.
+
+
+\subsection{Causal interpretation and its assumptions}
+\label{sec:causal}
+
+The adjustment above is not merely a statistical convenience; it is an attempt at causal
+identification, and it is worth stating what has to be true for the adjusted odds ratio to
+mean anything causal. Figure~\ref{fig:dag} gives the assumed causal structure.
+
+The quantity of interest is the effect of cardiac malformation on kidney phenotype. A
+confounding (backdoor) path runs from a disrupted developmental gene to both organs, because
+syndromic genes are pleiotropic by definition. If that path is left open, the two organs
+appear associated even when neither causes the other, and the unadjusted odds ratio of 5.81
+is largely a measurement of that path rather than of any cardiorenal axis.
+
+Conditioning on the pleiotropy measures is intended to block it. Three assumptions are
+required, and only the first is fully satisfied here:
+
+\begin{enumerate}
+\item \textbf{No unmeasured confounding given the proxy.} Organ-system count and term count
+must capture the shared developmental path completely. They are summaries of a latent
+quantity, not the quantity itself, so this assumption is certainly violated to some degree
+and residual confounding should be expected.
+\item \textbf{Correct functional form.} Logistic regression forces the effect of
+organ-system count to be linear on the log-odds scale. This is tested directly in
+Section~\ref{sec:aipw}.
+\item \textbf{Positivity.} Every disease must have a non-negligible chance of both affecting
+and not affecting the heart, given its covariates. This is also assessed in
+Section~\ref{sec:aipw}, where it turns out to be the binding constraint.
+\end{enumerate}
+
+Two variables are deliberately excluded from every adjustment set. The cardiovascular organ
+system is what the exposure is, so conditioning on it would remove the exposure itself. The
+genitourinary system is where the outcome lives, so conditioning on it would block the very
+effect being estimated. Including either would force a null result for reasons that have
+nothing to do with biology.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figM3_causal_dag.png}
+\caption[The causal model behind the adjustment]{The causal model behind the pleiotropy
+adjustment. (a) Unadjusted, the confounding path through the shared developmental gene is
+open and inflates the apparent association. (b) Conditioning on the measured proxy is
+intended to block it. The proxy is a stand-in for the confounder rather than the confounder
+itself, which is the main threat to a causal reading of the adjusted estimate.}
+\label{fig:dag}
+\end{figure}
 
 \subsection{Candidate gene list construction}
 
@@ -426,10 +482,11 @@ great arteries (4,270 cases), chronic kidney disease (10,039 cases) and cystic k
 (947 cases) from FinnGen release 10 \cite{kurki2023}.
 
 Variants were restricted to the HapMap 3 subset used for the pre-computed European LD scores
-(1,290,028 SNPs, $M_{5,50} = 1{,}173{,}569$) derived from 1000 Genomes Phase 3
+(1,290,028 SNPs, $M_{5,50} = 1{,}173{,}569$) derived from 1000~Genomes Phase~3
 \cite{1000g2015}. Strand-ambiguous variants, those with minor allele frequency below 0.01,
 and those with $\chi^2 > \max(80, 0.001N)$ were removed. Effective sample size
-$N_{\text{eff}} = 4/(1/n_{\text{case}} + 1/n_{\text{control}})$ was used for binary traits.
+$N_{\text{eff}} = 4/(1/n_{\text{case}} + 1/n_{\text{control}})$
+was used for binary traits.
 
 Heritability was estimated from the regression
 $\mathbb{E}[\chi^2_j] = 1 + (Nh^2/M)\ell_j$, and genetic covariance from
@@ -455,6 +512,78 @@ density, sample size and minor allele count together with the logarithms of each
 were tested: all 37 ciliary genes, the 31 with cystogenic genes removed, the 6 cystogenic
 genes alone, and the 166 Tier 1 genes with a gene-location entry. Gene symbols were mapped
 to Entrez identifiers through HGNC; all four sets mapped completely.
+
+
+\subsection{Mendelian randomisation}
+\label{sec:mrmethods}
+
+Genetic variants are allocated at conception and precede all postnatal exposures, so
+variants that raise liability to congenital heart disease provide a natural experiment for
+asking whether that liability causes later kidney impairment. Two-sample Mendelian
+randomisation was performed with FinnGen R10 \texttt{CONGEN\_HEART\_ARTER} (4,270 cases,
+407,911 controls) as exposure and the CKDGen eGFR meta-analysis as outcome.
+
+The FinnGen chronic kidney disease GWAS was deliberately \emph{not} used as the outcome
+despite being available. Exposure and outcome would then be drawn from the same individuals,
+and under complete sample overlap weak-instrument bias pulls the estimate towards the
+confounded observational association --- precisely the artefact this report argues against.
+CKDGen is a largely non-Finnish meta-analysis, so overlap is minimal.
+
+Instruments were selected at two thresholds: $p < 5\times10^{-8}$, and a relaxed
+$p < 10^{-5}$ to increase instrument count at the cost of instrument strength. Because CKDGen
+is reported on GRCh37 and FinnGen R10 on GRCh38, the two studies were merged on rsID rather
+than position. Independent signals were retained by distance-based clumping, keeping the
+strongest variant within each 500~kb window; a linkage-disequilibrium reference panel was not
+used, so residual correlation between instruments cannot be excluded. Variants with minor
+allele frequency below 1\% were discarded, which removed four ultra-rare Finnish-enriched
+17q25 signals whose odds ratios of 3.5--4.2 rest on fewer than ten carrier alleles.
+
+Alleles were harmonised to the exposure effect allele, with strand flips resolved by
+complementation and palindromic variants resolved by allele frequency, or dropped when the
+frequency fell between 0.42 and 0.58. Causal estimates used inverse-variance weighting with
+multiplicative random effects, the weighted median (standard error from 1,000 bootstrap
+replicates) and MR-Egger, whose intercept was used as a test for directional pleiotropy.
+Heterogeneity was quantified by Cochran's $Q$, influence by leave-one-out, and instrument
+strength by the mean $F$-statistic and the summed variance explained on the liability scale.
+
+Because a null result is only interpretable alongside a statement of power, the minimum
+detectable effect at 80\% power was computed as $2.80 \times \mathrm{SE}$.
+
+The reverse direction was run as a negative control. A cardiac malformation is complete by
+approximately the eighth week of gestation, decades before any adult measurement of kidney
+function, so adult eGFR cannot cause congenital heart disease. The true answer is known to be
+null, and any departure from null would indicate a fault in the pipeline or in the
+instruments rather than a biological finding. Directionality was additionally assessed with
+the Steiger test. Because summing per-variant $r^2$ across hundreds of instruments
+accumulates noise in the outcome trait, the verdict was taken from the number of instruments
+individually favouring each direction rather than from the summed values.
+
+\subsection{Doubly robust sensitivity analysis}
+\label{sec:aipw}
+
+Two of the three assumptions listed in Section~\ref{sec:causal} ---
+functional form and positivity --- were tested using augmented inverse probability weighting
+(AIPW) with machine learning nuisance models.
+
+The machine learning here is not used for prediction, and no predictive accuracy is reported.
+Gradient boosting is used only as a flexible description of the confounders, inside an
+estimator that still targets the same causal contrast. Two models are fitted: a propensity
+model for $P(\text{cardiac} \mid X)$ and an outcome model for
+$P(\text{kidney} \mid \text{cardiac}, X)$. AIPW combines them so that the estimate remains
+consistent if either one is correctly specified.
+
+Both nuisance models were histogram gradient-boosting classifiers (200 iterations, learning
+rate 0.1, maximum depth 4) fitted with five-fold cross-fitting stratified jointly on exposure
+and outcome, so that no disease contributed to fitting the model that later made predictions
+about it. Propensity scores were truncated to $[0.01, 0.99]$ and the truncated fraction is
+reported as a positivity diagnostic. The estimand is a risk difference, not an odds ratio, so
+it is not numerically comparable to $\exp(\beta_1)$.
+
+Two adjustment sets were used. The first contains only organ-system count and term count, so
+that the sole difference from the primary analysis is the shape of the model. The second adds
+one indicator per organ system, so that the adjustment responds to \emph{which} systems are
+involved rather than only how many. Cardiovascular and genitourinary indicators were excluded
+from both, for the reasons given above, leaving 21 organ-system columns.
 
 \subsection{Multiple testing}
 
@@ -788,6 +917,118 @@ excludes zero.}
 \label{fig:ldsc}
 \end{figure}
 
+
+\subsection{Mendelian randomisation finds no causal effect, within limited power}
+\label{sec:mrresults}
+
+Instrument availability is the binding constraint. At genome-wide significance the FinnGen
+CHD GWAS yields 67 variants resolving to seven independent regions, but four are
+Finnish-enriched signals with allele frequencies near 0.001, and one further region
+(\gene{PALMD}-adjacent 17q21, rs6504672) is absent from CKDGen. After frequency filtering and
+harmonisation only two instruments remain --- rs11166276 near \gene{PALMD} and rs4689912 near
+\gene{STX18}. Relaxing the threshold to $p < 10^{-5}$ gives 18 usable instruments.
+
+No analysis shows evidence of a causal effect of congenital heart disease liability on kidney
+function (Table~\ref{tab:mr}). The two-instrument estimate is $-0.0004$ (95\% CI $-0.0036$ to
+$+0.0028$, $p = 0.81$); the eighteen-instrument estimate is $-0.0009$ (95\% CI $-0.0029$ to
+$+0.0012$, $p = 0.41$). The weighted median agrees, and the MR-Egger intercept gives no
+evidence of directional pleiotropy ($p = 0.16$). Leave-one-out analysis moves the estimate by
+at most 1.17 standard errors, so no single instrument drives the result. All 18 instruments
+individually favour the assumed causal direction on the Steiger test.
+
+Two caveats limit how much weight this can carry. Cochran's $Q$ is significant at the relaxed
+threshold ($Q = 42.4$ on 17 df, $p = 5.9 \times 10^{-4}$), indicating that the instruments
+disagree more than chance allows, as expected when the selection threshold is loosened;
+random-effects weighting widens the interval accordingly. More importantly, the minimum
+detectable effect is $0.0029$ in log-eGFR units per unit log-odds of CHD liability. This
+excludes moderate and large effects but not small ones, so the result is an informative bound
+rather than a demonstration of no effect.
+
+The negative control behaves as required. Using 469 eGFR instruments against congenital heart
+disease as outcome --- a direction that is biologically impossible, since the malformation is
+complete before any adult kidney measurement exists --- returns $+0.234$ (95\% CI $-0.657$ to
+$+1.124$, $p = 0.61$).
+
+\begin{table}[H]
+\centering
+\small
+\caption[Mendelian randomisation results]{Two-sample Mendelian randomisation. Estimates are
+in log-eGFR units per unit log-odds of CHD liability, except the negative control, which is
+reversed. MDE is the minimum effect detectable at 80\% power.}
+\label{tab:mr}
+\begin{tabular}{llrrrr}
+\toprule
+Analysis & Method & $n$ & Estimate & 95\% CI & $p$ \\
+\midrule
+CHD $\rightarrow$ eGFR      & IVW             & 2  & $-0.0004$ & $-0.0036, +0.0028$ & 0.81 \\
+($p<5\times10^{-8}$)        & Weighted median & 2  & $-0.0007$ & $-0.0051, +0.0036$ & 0.74 \\
+                            & MDE (80\%)      & 2  & $0.0046$  & ---                & ---  \\
+\addlinespace
+CHD $\rightarrow$ eGFR      & IVW             & 18 & $-0.0009$ & $-0.0029, +0.0012$ & 0.41 \\
+($p<10^{-5}$)               & Weighted median & 18 & $-0.0000$ & $-0.0020, +0.0020$ & 1.00 \\
+                            & MR-Egger slope  & 18 & $+0.0036$ & $-0.0030, +0.0103$ & 0.28 \\
+                            & Egger intercept & 18 & $-0.00068$& $-0.0016, +0.0003$ & 0.16 \\
+                            & MDE (80\%)      & 18 & $0.0029$  & ---                & ---  \\
+\addlinespace
+eGFR $\rightarrow$ CHD      & IVW             & 469& $+0.234$  & $-0.657, +1.124$   & 0.61 \\
+(negative control)          & Weighted median & 469& $-0.050$  & $-1.506, +1.406$   & 0.95 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The adjustment survives a flexible model but not a richer one}
+\label{sec:aipwresults}
+
+Doubly robust estimation with gradient-boosting nuisance models separates two distinct
+threats to the primary analysis (Table~\ref{tab:aipw}).
+
+Relaxing the functional form alone leaves both conclusions intact. With the same two
+covariates as the primary model but no linearity assumption, cardiac involvement raises the
+probability of a structural kidney anomaly by 3.8 percentage points (95\% CI 1.3 to 6.4,
+$p = 0.003$), while the effect on CKD remains null ($-0.3$ points, $p = 0.66$). The pattern
+that motivates this report --- malformation yes, chronic disease no --- is therefore not an
+artefact of forcing a straight line through the log-odds.
+
+Adjusting for \emph{which} organ systems are involved is a different matter. The kidney
+anomaly effect falls to $-0.011$ and loses significance ($p = 0.31$), and the CKD estimate
+becomes significantly negative ($-0.015$, $p = 0.008$). Two things caution against reading
+this as a refutation. First, the truncated fraction rises from under 2\% to roughly 13\%,
+meaning that for one disease in eight the estimator is extrapolating to a comparison the data
+do not contain --- a positivity violation rather than a substantive finding. Second, the
+other organ-system indicators are themselves consequences of the same shared developmental
+cause, so conditioning on them is adjustment for descendants of the confounder, which can
+introduce bias rather than remove it.
+
+The honest reading is therefore that the CAKUT association is robust to how the confounder is
+modelled but sensitive to how richly it is specified, and that the available annotations
+cannot settle which specification is correct. The null result for CKD, by contrast, is stable
+across every specification tried.
+
+\begin{table}[H]
+\centering
+\small
+\caption[Doubly robust sensitivity analysis]{Doubly robust (AIPW) estimates with
+gradient-boosting nuisance models and five-fold cross-fitting. Estimates are risk
+differences and are not comparable to the odds ratios above. ``Clipped'' is the fraction of
+diseases whose propensity score required truncation, a positivity diagnostic.}
+\label{tab:aipw}
+\begin{tabular}{llrrr}
+\toprule
+Outcome & Adjustment & Estimate & 95\% CI & Clipped \\
+\midrule
+Kidney anomaly & unadjusted risk difference    & $+0.195$ & ---                & --- \\
+               & logistic, counts (OR 1.77)    & ---      & ---                & --- \\
+               & AIPW, counts only             & $+0.038$ & $+0.013, +0.064$   & 1.9\% \\
+               & AIPW, counts $+$ each system  & $-0.011$ & $-0.031, +0.010$   & 13.1\% \\
+\addlinespace
+CKD            & unadjusted risk difference    & $+0.021$ & ---                & --- \\
+               & logistic, counts (OR 0.95)    & ---      & ---                & --- \\
+               & AIPW, counts only             & $-0.003$ & $-0.016, +0.010$   & 1.9\% \\
+               & AIPW, counts $+$ each system  & $-0.015$ & $-0.026, -0.004$   & 12.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 % ======================================================================
 \section{Discussion}
 
@@ -837,6 +1078,7 @@ background. The class-level claim in this thesis therefore rests on the rare-var
 evidence alone.
 
 \subsection{Survivorship bias as a structural constraint}
+\label{sec:survivorship}
 
 The lesion-level analysis exposes a limitation that no analytical choice can remedy. Adult
 biobanks are recruited from survivors, and the cardiac lesions most strongly linked to kidney
@@ -844,6 +1086,23 @@ anomaly are those with the poorest historical survival. Any study of congenital 
 cohort recruited at ages 40--69 is studying the mild tail of the phenotype distribution. The
 same reasoning explains why dominant, adult-onset cystogenic genes dominate the exome
 results while recessive severe ciliopathy genes are silent.
+
+
+\subsection{What causal analysis can and cannot add here}
+
+Three of the analyses in this report bear on causation, and they fail in informative ways.
+The pleiotropy adjustment is a backdoor-blocking argument that depends on a proxy standing in
+for an unmeasured confounder. Mendelian randomisation avoids that dependence entirely but is
+starved of instruments, because a congenital condition affecting roughly one birth in a
+hundred yields two usable variants at conventional thresholds. The doubly robust analysis
+relaxes the modelling assumptions but runs into positivity: syndromic and non-syndromic
+diseases are so different that for one disease in eight there is no comparable counterpart.
+
+These are not independent failures. All three trace to the same structural problem noted in
+Section~\ref{sec:survivorship}: the phenotype that carries the signal is congenital, rare,
+and largely absent from the adult cohorts where genetic resources are concentrated. No
+reweighting of the available data resolves that, which is why the causal claims made here are
+deliberately bounded --- an upper limit on effect size, rather than an effect estimate.
 
 \subsection{Limitations}
 
@@ -880,6 +1139,7 @@ congenital heart disease and congenital anomalies of the kidney and urinary trac
 mediated by ciliary biology---specifically by the intraflagellar transport machinery that
 assembles the cilium, rather than by the BBSome cargo-sorting complex.
 
+\enlargethispage{2\baselineskip}
 For study design this implies three things. Candidate gene lists for this question should be
 narrow and ciliary rather than broad. The phenotype should be structural kidney anomaly
 rather than chronic kidney disease. And the outcome should be a quantitative kidney
@@ -1043,6 +1303,7 @@ and the source for every figure in this report are available at
 \texttt{github.com/sahoo2000/chd-ckd-genetics}. Resource versions are listed in
 Table~\ref{tab:versions}.
 
+\enlargethispage{3\baselineskip}
 A complete regenie \cite{mbatchou2021} pipeline for individual-level UK Biobank analysis is
 included in the repository but was \emph{not} executed, as this project had no
 individual-level access. It is retained because the gene sets and analysis logic are
