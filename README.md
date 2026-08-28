@@ -123,6 +123,13 @@ and no longer installs, so this reimplements the published estimator. **It was v
 against a published heritability estimate and a positive control before use, but it is not
 the reference binary — say so if you publish this.**
 
+**`07_make_figures.py`** — draws the 11 data figures.
+
+**`09_make_schematic_figures.py`** — draws the graphical abstract, the causal DAG, and the introduction and
+methods diagrams.
+
+**`08_run_magma.sh`** — gene-level and gene-set association from the CKDGen GWAS.
+
 **`10_mendelian_randomisation.py`** — asks whether congenital heart disease *causes* worse
 kidney function, using genetic variants as a natural experiment. FinnGen CHD is the exposure
 and CKDGen eGFR the outcome. **It deliberately does not use FinnGen's own CKD GWAS as the
@@ -140,12 +147,6 @@ description of the confounders inside an estimator targeting the same causal con
 cardiovascular and genitourinary organ systems are excluded from every adjustment set,
 because one is the exposure and the other is the outcome.
 
-**`07_make_figures.py`** — draws the 11 data figures.
-
-**`09_make_schematic_figures.py`** — draws the graphical abstract and the introduction and
-methods diagrams.
-
-**`08_run_magma.sh`** — gene-level and gene-set association from the CKDGen GWAS.
 
 ---
 
