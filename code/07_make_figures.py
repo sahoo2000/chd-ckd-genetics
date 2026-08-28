@@ -124,7 +124,9 @@ def figure2_organ_specificity():
             colours.append(LIGHT)
 
     positions = np.arange(len(top))[::-1]
-    ax.barh(positions, top["OR"], color=colours, edgecolor=GREY, linewidth=0.7)
+    ax.barh(positions, top["OR"], height=0.68, color=colours,
+            edgecolor=GREY, linewidth=0.7)
+    ax.grid(axis="y", visible=False)
     names = []
     for i in range(len(top)):
         names.append(top.loc[i, "term"].replace("Abnormal ", "").replace(" morphology", ""))
@@ -292,31 +294,53 @@ def figure5_qq():
 # ----------------------------------------------------------------------
 
 def figure6_subcomplex():
-    # These come from 04_genebass_analysis.py
+    # These come from 05_genebass_analysis.py
     families = ["ADPKD / cystogenic", "IFT-A", "IFT-B", "Dynein-2",
                 "NPHP module", "Transition zone / MKS",
                 "Chaperonin (BBS6/10/12)", "BBSome"]
     enrichment = [6.67, 5.5, 5.0, 5.0, 2.5, 1.88, 1.67, 1.0]
 
-    fig, ax = plt.subplots(figsize=(7, 3.8))
+    fig, ax = plt.subplots(figsize=(7.2, 3.6))
+
+    # Darker teal for the strongly enriched groups, pale stone for the
+    # ones sitting at or near no enrichment.
     colours = []
+    edges = []
     for value in enrichment:
         if value >= 4:
-            colours.append(RED_FILL)
-        elif value >= 2:
             colours.append(TEAL_FILL)
+            edges.append(TEAL)
+        elif value >= 2:
+            colours.append(GREEN_FILL)
+            edges.append(GREEN)
         else:
             colours.append(LIGHT)
+            edges.append(GREY)
 
     positions = np.arange(len(families))[::-1]
-    ax.barh(positions, enrichment, color=colours, edgecolor=GREY, linewidth=0.7)
-    ax.axvline(1, color="black", linestyle="--", linewidth=0.9)
-    ax.text(1.06, 0.35, "no enrichment", fontsize=8, color="black")
+    bars = ax.barh(positions, enrichment, height=0.62,
+                   color=colours, linewidth=0.9)
+    for i in range(len(bars)):
+        bars[i].set_edgecolor(edges[i])
+
+    # write the value at the end of each bar
+    for i in range(len(enrichment)):
+        ax.text(enrichment[i] + 0.12, positions[i], "%.2fx" % enrichment[i],
+                va="center", fontsize=8, color=INK)
+
+    ax.axvline(1, color=INK, linestyle="--", linewidth=0.9)
+    # put the label above the plot area so it cannot sit on top of a bar
+    ax.text(1.15, len(families) - 0.35, "no enrichment", ha="left",
+            fontsize=8, color=MUTED)
+
     ax.set_yticks(positions)
     ax.set_yticklabels(families, fontsize=8.5)
+    ax.set_xlim(0, 7.6)
+    ax.set_ylim(-0.7, len(families) - 0.1)
     ax.set_xlabel("Nominal hits divided by hits expected by chance")
     ax.set_title("The signal follows the machinery that builds the cilium.\n"
                  "The BBSome, which only sorts cargo, shows nothing.", loc="left")
+    ax.grid(axis="y", visible=False)
     save(fig, "fig06_subcomplex_enrichment.png")
 
 
@@ -341,8 +365,9 @@ def figure7_direction():
         negative = int((hits["BETA"] <= 0).sum())
         pvalue = binomtest(positive, positive + negative, 0.5, alternative="greater").pvalue
 
-        ax.bar([0, 1], [positive, negative], color=[RED_FILL, LIGHT],
-               edgecolor=GREY, linewidth=0.8, width=0.6)
+        ax.bar([0, 1], [positive, negative], color=[TEAL_FILL, LIGHT],
+               edgecolor=GREY, linewidth=0.8, width=0.55)
+        ax.grid(axis="x", visible=False)
         ax.set_xticks([0, 1])
         ax.set_xticklabels(["worse kidney\nfunction", "better kidney\nfunction"], fontsize=8.5)
         ax.set_ylabel("Number of nominally significant results")
@@ -407,7 +432,9 @@ def figure9_sample_sizes():
     fig, ax = plt.subplots(figsize=(7, 3.6))
     colours = [TEAL_FILL, TEAL_FILL, RED_FILL, RED_FILL, palette.ROSE[1]]
     positions = np.arange(len(names))[::-1]
-    ax.barh(positions, counts, color=colours, edgecolor=GREY, linewidth=0.7)
+    ax.barh(positions, counts, height=0.62, color=colours,
+            edgecolor=GREY, linewidth=0.7)
+    ax.grid(axis="y", visible=False)
     ax.set_xscale("log")
     ax.set_yticks(positions)
     ax.set_yticklabels(names, fontsize=8.5)

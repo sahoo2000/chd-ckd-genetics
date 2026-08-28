@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Ellipse
 
 import palette
-from palette import (box, arrow, blank_axes, row_positions,
+from palette import (box, arrow, blank_axes, row_positions, fitted_text,
                      INK, MUTED, HAIRLINE,
                      ROSE, TEAL, SAGE, SAND, LILAC, STONE,
                      ROSE_LINE, TEAL_LINE, SAGE_LINE)
@@ -47,7 +47,7 @@ def band_label(ax, x, y, text):
 # ======================================================================
 
 def graphical_abstract():
-    fig, ax = plt.subplots(figsize=(10.0, 5.8))
+    fig, ax = plt.subplots(figsize=(10.0, 5.3))
     blank_axes(ax)
 
     ax.text(0.5, 0.962, "Towards a Mechanistic Explanation of CHD-CKD",
@@ -140,10 +140,11 @@ def graphical_abstract():
         "IFT and dynein-2\n5.0 to 5.5x enriched", SAGE, 7.5, textcolour=SAGE_LINE)
     box(ax, 0.676, 0.236, 0.190, 0.056,
         "BBSome\n1.0x, no signal", STONE, 7.5)
-    ax.text(0.771, 0.192, "assembly matters,\ncargo sorting does not",
-            ha="center", fontsize=7.5, color=MUTED, style="italic", linespacing=1.5)
+    ax.text(0.771, 0.170, "assembly matters,\ncargo sorting does not",
+            ha="center", va="center", fontsize=7.5, color=MUTED,
+            style="italic", linespacing=1.5)
 
-    ax.text(0.5, 0.058,
+    ax.text(0.5, 0.048,
             "Rare loss-of-function burden in 394,841 UK Biobank exomes   ·   "
             "9.7x excess at p < 0.001   ·   59 of 60 in the predicted direction",
             ha="center", fontsize=7.5, color=MUTED)
@@ -162,7 +163,7 @@ def intro_figure_hypotheses():
     ax.text(0.5, 0.950, "Two explanations for the same clinical observation",
             ha="center", fontsize=11.5, weight="bold", color=INK)
 
-    ax.plot([0.5, 0.5], [0.14, 0.87], color=HAIRLINE, linewidth=1.2)
+    ax.plot([0.5, 0.5], [0.20, 0.90], color=HAIRLINE, linewidth=1.2)
 
     # ---- panel A ----
     ax.text(0.25, 0.865, "A.  Shared genetic cause", ha="center",
@@ -211,13 +212,14 @@ def intro_figure_hypotheses():
 # ======================================================================
 
 def intro_figure_pleiotropy():
-    fig, ax = plt.subplots(figsize=(8.6, 4.2))
+    fig, ax = plt.subplots(figsize=(9.0, 4.4))
     blank_axes(ax)
 
-    ax.text(0.5, 0.950, "Why counting shared genes is not enough",
+    ax.text(0.5, 0.955, "Why counting shared genes is not enough",
             ha="center", fontsize=11.5, weight="bold", color=INK)
 
-    box(ax, 0.020, 0.505, 0.150, 0.090, "a developmental\ngene is disrupted",
+    # ---- left half: one gene, many organs ----
+    box(ax, 0.015, 0.470, 0.150, 0.100, "a developmental\ngene is disrupted",
         LILAC, 8)
 
     organs = ["heart", "kidney", "thumb", "palate", "brain", "ear"]
@@ -225,35 +227,44 @@ def intro_figure_pleiotropy():
     text_colours = [ROSE_LINE, TEAL_LINE, INK, INK, INK, INK]
 
     top = 0.800
-    step = 0.107
+    step = 0.104
     for i in range(len(organs)):
         y = top - i * step
-        box(ax, 0.250, y, 0.100, 0.066, organs[i], fills[i], 8,
+        box(ax, 0.245, y, 0.100, 0.066, organs[i], fills[i], 8,
             textcolour=text_colours[i])
-        arrow(ax, 0.174, 0.550, 0.244, y + 0.033, width=0.9)
+        arrow(ax, 0.172, 0.520, 0.239, y + 0.033, width=0.9)
 
-    ax.text(0.300, 0.098, "one gene, many organs", ha="center",
-            fontsize=8, color=MUTED, style="italic")
+    fitted_text(ax, 0.295, 0.115, "one gene, many organs", 0.30,
+                fontsize=8, colour=MUTED, italic=True)
 
-    ax.plot([0.415, 0.415], [0.10, 0.87], color=HAIRLINE, linewidth=1.2)
+    ax.plot([0.400, 0.400], [0.10, 0.87], color=HAIRLINE, linewidth=1.2)
 
-    ax.text(0.715, 0.865, "The consequence", ha="center", fontsize=9.5,
-            weight="bold", color=INK)
-    ax.text(0.715, 0.740,
-            "Every pair of organs now shares this gene.\n"
-            "Heart and kidney share it. So do heart and thumb.\n"
-            "A simple overlap test cannot tell these apart.",
-            ha="center", fontsize=8.5, color=INK, linespacing=1.75)
+    # ---- right half: what follows from it ----
+    RIGHT_CENTRE = 0.700
+    RIGHT_WIDTH = 0.545
 
-    box(ax, 0.455, 0.430, 0.52, 0.100,
-        "What we observe:  diseases with a heart malformation affect\n"
-        "a median of 11 organ systems; other diseases affect 5",
+    ax.text(RIGHT_CENTRE, 0.860, "The consequence", ha="center",
+            fontsize=9.5, weight="bold", color=INK)
+
+    fitted_text(ax, RIGHT_CENTRE, 0.745,
+                "Every pair of organs now shares this gene.\n"
+                "Heart and kidney share it. So do heart and thumb.\n"
+                "A simple overlap test cannot tell these apart.",
+                RIGHT_WIDTH, fontsize=8.5, linespacing=1.8)
+
+    box(ax, 0.428, 0.470, RIGHT_WIDTH, 0.120,
+        "What we observe:  diseases with a heart malformation\n"
+        "affect a median of 11 organ systems;\n"
+        "other diseases affect 5",
         SAND, 8.5)
-    arrow(ax, 0.715, 0.424, 0.715, 0.368, width=1.4)
-    box(ax, 0.455, 0.225, 0.52, 0.135,
-        "The solution used here:  model the kidney phenotype while\n"
-        "adjusting for the number of organ systems affected and\n"
-        "the number of annotated terms per disease",
+
+    arrow(ax, RIGHT_CENTRE, 0.462, RIGHT_CENTRE, 0.408, width=1.4)
+
+    box(ax, 0.428, 0.235, RIGHT_WIDTH, 0.165,
+        "The solution used here:  model the kidney phenotype\n"
+        "while adjusting for the number of organ systems\n"
+        "affected and the number of annotated terms\n"
+        "for each disease",
         SAGE, 8.5, textcolour=SAGE_LINE)
 
     save(fig, "figI2_pleiotropy_problem.png")

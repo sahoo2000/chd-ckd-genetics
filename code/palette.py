@@ -65,14 +65,28 @@ def wrap(text, characters_per_line):
     return "\n".join(textwrap.wrap(text, characters_per_line))
 
 
+def _text_size_in_axes(fig, ax, text_object):
+    """Measure a drawn text object and return its width and height as a
+    fraction of the axes, so we can compare it with a box size."""
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    bbox_pixels = text_object.get_window_extent(renderer=renderer)
+    bbox_axes = bbox_pixels.transformed(ax.transAxes.inverted())
+    return bbox_axes.width, bbox_axes.height
+
+
 def box(ax, x, y, width, height, text, colours,
-        fontsize=8, bold=False, textcolour=None, wrap_at=None):
+        fontsize=8, bold=False, textcolour=None, wrap_at=None,
+        padding=0.90):
     """
     Draw a soft rounded box with text inside it.
 
-    x and y are the bottom-left corner. The text is centred. If wrap_at is
-    given the text is wrapped to that many characters per line first, which
-    is the easiest way to stop text spilling out of the box.
+    x and y are the bottom-left corner. The text is centred and, most
+    importantly, it is MEASURED after being drawn. If it turns out to be
+    too wide or too tall for the box, the font is made smaller until it
+    fits. That is why no label in these figures spills out of its box.
+
+    padding is how much of the box the text is allowed to fill.
     """
     fill, line = colours
     patch = FancyBboxPatch((x, y), width, height,
@@ -85,9 +99,51 @@ def box(ax, x, y, width, height, text, colours,
     if textcolour is None:
         textcolour = INK
 
-    ax.text(x + width / 2.0, y + height / 2.0, text,
-            ha="center", va="center", fontsize=fontsize, color=textcolour,
-            weight="bold" if bold else "normal", linespacing=1.5)
+    text_object = ax.text(x + width / 2.0, y + height / 2.0, text,
+                          ha="center", va="center", fontsize=fontsize,
+                          color=textcolour,
+                          weight="bold" if bold else "normal",
+                          linespacing=1.5)
+
+    # Shrink the font until the text fits inside the box. We stop at 4.5
+    # point because anything smaller would be unreadable in print.
+    figure = ax.get_figure()
+    current_size = fontsize
+    while current_size > 4.5:
+        text_width, text_height = _text_size_in_axes(figure, ax, text_object)
+        fits_across = text_width <= width * padding
+        fits_down = text_height <= height * padding
+        if fits_across and fits_down:
+            break
+        current_size = current_size - 0.25
+        text_object.set_fontsize(current_size)
+
+    return text_object
+
+
+def fitted_text(ax, x_centre, y_centre, text, max_width,
+                fontsize=8, colour=None, bold=False, italic=False,
+                linespacing=1.6):
+    """
+    Free-standing text (not in a box) that is shrunk if it would be wider
+    than max_width, given as a fraction of the axes.
+    """
+    if colour is None:
+        colour = INK
+    text_object = ax.text(x_centre, y_centre, text, ha="center", va="center",
+                          fontsize=fontsize, color=colour,
+                          weight="bold" if bold else "normal",
+                          style="italic" if italic else "normal",
+                          linespacing=linespacing)
+    figure = ax.get_figure()
+    current_size = fontsize
+    while current_size > 4.5:
+        text_width, text_height = _text_size_in_axes(figure, ax, text_object)
+        if text_width <= max_width:
+            break
+        current_size = current_size - 0.25
+        text_object.set_fontsize(current_size)
+    return text_object
 
 
 def arrow(ax, x1, y1, x2, y2, colour=None, width=1.3):

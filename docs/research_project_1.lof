@@ -1,14 +1,14 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Two explanations for CHD--CKD co-occurrence}}{9}{figure.caption.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces The pleiotropy problem}}{10}{figure.caption.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Analysis workflow}}{11}{figure.caption.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Gene list filtering}}{14}{figure.caption.5}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Overlap of congenital heart disease genes with each organ system. The kidney (highlighted) ranks 16th of 194. Many anatomically unrelated structures overlap the heart as strongly, which is the signature of syndromic pleiotropy rather than a specific cardiorenal axis.}}{17}{figure.caption.6}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Odds ratios with 95\% confidence intervals. The association with structural kidney malformation survives adjustment; the association with chronic kidney disease does not, and its adjusted interval spans the null.}}{18}{figure.caption.8}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Adjusted odds ratio for a structural kidney anomaly, by cardiac lesion. The ordering runs almost exactly opposite to availability in an adult biobank.}}{19}{figure.caption.9}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Available sample sizes in UK Biobank. The comorbidity phenotype is not analysable; a quantitative kidney trait is measured in essentially everyone.}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Gene-burden associations for the 37 ciliary genes across 20 renal phenotypes. Only dominant cystogenic genes clear exome-wide significance.}}{20}{figure.caption.12}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Quantile--quantile plots of gene-burden $p$-values. Ciliary genes depart from the null distribution more than non-ciliary candidate genes, and continue to do so after the known cystogenic genes are removed (right panel).}}{21}{figure.caption.13}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Enrichment of nominally significant renal associations by ciliary subcomplex.}}{22}{figure.caption.14}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Direction of effect among nominally significant results. Loss-of-function results point overwhelmingly toward worse kidney function; unfiltered missense results do not.}}{22}{figure.caption.15}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Rare-variant burden evidence against common-variant gene-level evidence for the same 37 ciliary genes. The two lines of evidence highlight different genes.}}{24}{figure.caption.17}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Genetic correlations with 95\% confidence intervals. Only the positive control excludes zero.}}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Two explanations for CHD--CKD co-occurrence}}{8}{figure.caption.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces The pleiotropy problem}}{9}{figure.caption.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Analysis workflow}}{10}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Gene list filtering}}{13}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Overlap of congenital heart disease genes with each organ system. The kidney (highlighted) ranks 16th of 194. Many anatomically unrelated structures overlap the heart as strongly, which is the signature of syndromic pleiotropy rather than a specific cardiorenal axis.}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Odds ratios with 95\% confidence intervals. The association with structural kidney malformation survives adjustment; the association with chronic kidney disease does not, and its adjusted interval spans the null.}}{17}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Adjusted odds ratio for a structural kidney anomaly, by cardiac lesion. The ordering runs almost exactly opposite to availability in an adult biobank.}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Available sample sizes in UK Biobank. The comorbidity phenotype is not analysable; a quantitative kidney trait is measured in essentially everyone.}}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Gene-burden associations for the 37 ciliary genes across 20 renal phenotypes. Only dominant cystogenic genes clear exome-wide significance.}}{19}{figure.caption.12}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Quantile--quantile plots of gene-burden $p$-values. Ciliary genes depart from the null distribution more than non-ciliary candidate genes, and continue to do so after the known cystogenic genes are removed (right panel).}}{20}{figure.caption.13}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Enrichment of nominally significant renal associations by ciliary subcomplex.}}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Direction of effect}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Rare-variant burden evidence against common-variant gene-level evidence for the same 37 ciliary genes. The two lines of evidence highlight different genes.}}{22}{figure.caption.17}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Genetic correlations with 95\% confidence intervals. Only the positive control excludes zero.}}{23}{figure.caption.19}%
