@@ -1,0 +1,21 @@
+trait_type	phenocode	description	n_cases
+continuous	30500	Microalbumin in urine	119013
+continuous	30510	Creatinine (enzymatic) in urine	383774
+continuous	30670	Urea	376551
+continuous	30700	Creatinine	376624
+continuous	30720	Cystatin C	376784
+icd10	C64	Malignant neoplasm of kidney, except renal pelvis	985
+icd_first_occurrence	131290	I12 hypertensive renal disease	1513
+icd_first_occurrence	132006	N04 nephrotic syndrome	242
+icd_first_occurrence	132014	N08 glomerular disorders in diseases classified elsewhere	531
+icd_first_occurrence	132030	N17 acute renal failure	7312
+icd_first_occurrence	132032	N18 chronic renal failure	14086
+icd_first_occurrence	132034	N19 unspecified renal failure	2345
+icd_first_occurrence	132036	N20 calculus of kidney and ureter	5879
+icd_first_occurrence	132042	N23 unspecified renal colic	4304
+icd_first_occurrence	132044	N25 disorders resulting from impaired renal tubular function	160
+icd_first_occurrence	132046	N26 unspecified contracted kidney	176
+icd_first_occurrence	132050	N28 other disorders of kidney and ureter	5275
+icd_first_occurrence	132530	Q60 renal agenesis and other reduction defects of kidney	199
+icd_first_occurrence	132532	Q61 cystic kidney disease	735
+icd_first_occurrence	132536	Q63 other congenital malformations of kidney	452

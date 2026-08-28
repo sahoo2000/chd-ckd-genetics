@@ -1,0 +1,7 @@
+gene_symbol	ensembl_id	chrom	gene_start	gene_end	tier	mechanism	n_dis_card	n_dis_kid	n_dis_ckd	pLI	LOEUF
+GANAB	ENSG00000089597	11	62624829	62646613	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	1	2	1	1.0	0.391
+ALG9	ENSG00000086848	11	111782195	111871581	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	4	4	1	1.3976e-12	0.853
+IFT140	ENSG00000187535	16	1510427	1612072	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	5	5	8.685900000000001e-35	0.972
+PKD1	ENSG00000008710	16	2088708	2135898	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	2	2	2	1.0	0.364
+DNAJB11	ENSG00000090520	3	186570720	186585793	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	1	2	2	0.00011029	0.933
+PKD2	ENSG00000118762	4	88007635	88077777	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	2	2	2	0.00018979	0.683

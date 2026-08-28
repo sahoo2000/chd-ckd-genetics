@@ -1,0 +1,610 @@
+gene_symbol	ensembl_id	chrom	gene_start	gene_end	tier	mechanism	n_dis_card	n_dis_kid	n_dis_ckd	pLI	LOEUF
+B3GALT6	ENSG00000176022	1	1232237	1235041	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0328e-14	1.987
+DVL1	ENSG00000107404	1	1335278	1349418	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2538e-14	1.046
+MMP23B	ENSG00000189409	1	1632173	1634654	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0103	1.923
+GABRD	ENSG00000187730	1	2019345	2030758	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00016648	0.786
+PRKCZ	ENSG00000067606	1	2050411	2185395	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.050019	0.576
+SKI	ENSG00000157933	1	2228319	2310213	3 - CHD + renal anomaly, single-disease	Other	3	1	0	6.9663e-06	0.809
+PEX10	ENSG00000157911	1	2403974	2412564	2 - CHD + renal anomaly, multi-disease	Peroxisomal	2	2	0	9.5794e-11	1.234
+PRDM16	ENSG00000142611	1	3069203	3438621	3 - CHD + renal anomaly, single-disease	Other	3	1	0	1.0	0.304
+KCNAB2	ENSG00000069424	1	6045888	6101180	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.018746	0.622
+RERE	ENSG00000142599	1	8352404	8817640	2 - CHD + renal anomaly, multi-disease	Other	3	2	0	0.99882	0.459
+UBE4B	ENSG00000130939	1	10032958	10181239	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.237
+CASZ1	ENSG00000130940	1	10636604	10796646	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.285
+CIROZ	ENSG00000175262	1	10946475	10982076	3 - CHD + renal anomaly, single-disease	Other	1	1	0		
+MAD2L2	ENSG00000116670	1	11674480	11681148	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.0030912	0.806
+PDPN	ENSG00000162493	1	13583832	13617957	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.7337	0.689
+SPEN	ENSG00000065526	1	15847707	15940456	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.094
+CLCNKB	ENSG00000184908	1	16043782	16057308	1 - CHD + renal anomaly + documented CKD	Other	1	3	2	1.4731e-22	1.072
+SDHB	ENSG00000117118	1	17018722	17054032	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	1	2	0	0.027807	0.741
+HSPG2	ENSG00000142798	1	21822244	21937310	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.3604e-38	0.603
+CDC42	ENSG00000070831	1	22052709	22101360	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.872	0.611
+WNT4	ENSG00000162552	1	22117313	22143097	2 - CHD + renal anomaly, multi-disease	Other	2	5	0	0.054707	0.694
+KDM1A	ENSG00000004487	1	23019468	23083689	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.003442	0.638
+LUZP1	ENSG00000169641	1	23084030	23168856	3 - CHD + renal anomaly, single-disease	Other	1	1	0		
+RPL11	ENSG00000142676	1	23691806	23696835	2 - CHD + renal anomaly, multi-disease	Ribosomopathy	2	2	0	0.99902	0.342
+LDLRAP1	ENSG00000157978	1	25543606	25568886	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2791e-08	1.083
+ARID1A	ENSG00000117713	1	26696015	26782104	3 - CHD + renal anomaly, single-disease	Chromatin / histone modifier	2	1	0	1.0	0.141
+PIGV	ENSG00000060642	1	26787950	26800659	3 - CHD + renal anomaly, single-disease	Other	1	2	0	1.771e-06	0.902
+DPH2	ENSG00000132768	1	43970010	43973369	3 - CHD + renal anomaly, single-disease	Other	2	1	0	7.5361e-07	0.914
+MMACHC	ENSG00000132763	1	45500300	45513382	1 - CHD + renal anomaly + documented CKD	Other	1	1	2	0.00018448	1.162
+STIL	ENSG00000123473	1	47250139	47314147	3 - CHD + renal anomaly, single-disease	Other	4	1	0	0.0050023	0.575
+CPT2	ENSG00000157184	1	53196824	53214197	1 - CHD + renal anomaly + documented CKD	Other	4	3	4	1.9677e-09	1.038
+PCSK9	ENSG00000169174	1	55039548	55064852	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.1172e-20	1.25
+PGM1	ENSG00000079739	1	63593411	63660245	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.9806e-17	1.189
+CACHD1	ENSG00000158966	1	64470129	64693053	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.3473e-06	0.633
+IL23R	ENSG00000162594	1	67166454	67259979	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.0015618	0.739
+WLS	ENSG00000116729	1	68125360	68232523	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.995	0.475
+LRRC7	ENSG00000033122	1	69567922	70144364	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.203
+PRKACB	ENSG00000142875	1	84144271	84238498	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.97102	0.513
+RPL5	ENSG00000122406	1	92832040	92841924	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	1.0	0.096
+PTPN22	ENSG00000134242	1	113813811	113871712	1 - CHD + renal anomaly + documented CKD	Other	2	2	2		
+NOTCH2	ENSG00000134250	1	119911553	120069662	1 - CHD + renal anomaly + documented CKD	NOTCH signalling	3	3	1	1.0	0.151
+PEX11B	ENSG00000131779	1	145911350	145918717	3 - CHD + renal anomaly, single-disease	Peroxisomal	2	1	0	0.00040379	1.077
+SF3B4	ENSG00000143368	1	149923317	149927803	3 - CHD + renal anomaly, single-disease	Other	1	3	0	0.99997	0.259
+ZNF687	ENSG00000143373	1	151282299	151292176	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.293
+POGZ	ENSG00000143442	1	151402724	151459494	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.198
+RPS27	ENSG00000177954	1	153990762	153992155	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.93176	0.52
+YY1AP1	ENSG00000163374	1	155659454	155688774	3 - CHD + renal anomaly, single-disease	Other	2	1	0	4.1712e-15	1.319
+RIT1	ENSG00000143622	1	155897808	155911349	3 - CHD + renal anomaly, single-disease	RAS-MAPK (RASopathy)	2	1	0	0.96123	0.523
+LMNA	ENSG00000160789	1	156114711	156140081	3 - CHD + renal anomaly, single-disease	Other	17	1	0	0.99995	0.412
+FCGR2A	ENSG00000143226	1	161505457	161519829	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.00023441	0.922
+FCGR2B	ENSG00000072694	1	161663143	161678654	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.0017783	0.995
+PBX1	ENSG00000185630	1	164559184	164851831	1 - CHD + renal anomaly + documented CKD	Other	1	2	2	1.0	0.212
+TMCO1	ENSG00000143183	1	165726795	165768868	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.8145e-07	1.404
+CACNA1E	ENSG00000198216	1	181483517	181808084	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.221
+LAMC2	ENSG00000058085	1	183186264	183245127	3 - CHD + renal anomaly, single-disease	ECM / basement membrane	1	1	0	1.5550000000000002e-20	0.797
+DDX59	ENSG00000118197	1	200644037	200669907	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	2.7973e-08	0.864
+UBE2T	ENSG00000077152	1	202331657	202341936	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.082991	0.838
+IL10	ENSG00000136634	1	206767602	206772494	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.48464	0.711
+KCNH1	ENSG00000143473	1	210678314	211134148	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.81678	0.526
+FLVCR1	ENSG00000162769	1	212858275	212899363	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.6916e-07	1.013
+RAB3GAP2	ENSG00000118873	1	220148293	220272453	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00071117	0.535
+DISP1	ENSG00000154309	1	222815039	223005995	3 - CHD + renal anomaly, single-disease	Other	5	1	0	1.3426e-07	1.028
+CHRM3	ENSG00000133019	1	239386568	239915450	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.99943	0.42
+FH	ENSG00000091483	1	241497603	241519755	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.26752	0.599
+SDCCAG8	ENSG00000054282	1	243256041	243500091	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	4	3	4.0107e-13	0.843
+AKT3	ENSG00000117020	1	243499724	243850243	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99015	0.482
+HNRNPU	ENSG00000153187	1	244850297	244864543	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.111
+GATA3	ENSG00000107485	10	8054688	8075198	1 - CHD + renal anomaly + documented CKD	Developmental TF (CAKUT/CHD syndromes)	1	2	2	0.99953	0.376
+WAC	ENSG00000095787	10	28533118	28623112	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.248
+ERCC6	ENSG00000225830	10	49454470	49539121	1 - CHD + renal anomaly + documented CKD	Other	1	1	3	1.2087e-23	0.803
+BICC1	ENSG00000122870	10	58512872	58831435	1 - CHD + renal anomaly + documented CKD	Other	1	2	2	0.29986	0.541
+JMJD1C	ENSG00000171988	10	63167225	63465977	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.157
+DNA2	ENSG00000138346	10	68414064	68471973	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.8618e-27	1.115
+NODAL	ENSG00000156574	10	70431936	70441681	2 - CHD + renal anomaly, multi-disease	Other	6	2	0	0.16392	0.854
+SLC29A3	ENSG00000198246	10	71319259	71363385	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.00011015	0.933
+FAM149B1	ENSG00000138286	10	73168119	73244504	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.3985e-10	0.98
+SEC24C	ENSG00000176986	10	73744372	73772161	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.275
+KAT6B	ENSG00000156650	10	74826600	75032624	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	4	2	0	1.0	0.098
+DLG5	ENSG00000151208	10	77790791	77926755	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.333
+POLR3A	ENSG00000148606	10	77975149	78029515	3 - CHD + renal anomaly, single-disease	Other	2	1	0	6.179699999999999e-22	0.836
+RPS24	ENSG00000138326	10	78033863	78040697	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99945	0.182
+FAS	ENSG00000026103	10	88990798	89017059	1 - CHD + renal anomaly + documented CKD	Other	1	2	2	0.99961	0.372
+ALDH18A1	ENSG00000059573	10	95605941	95656711	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.00013089	0.617
+TCTN3	ENSG00000119977	10	95663401	95693927	2 - CHD + renal anomaly, multi-disease	Other	4	4	0	1.3321e-13	0.938
+CHUK	ENSG00000213341	10	100188300	100229596	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.3913	0.61
+FGF8	ENSG00000107831	10	101770109	101776114	2 - CHD + renal anomaly, multi-disease	Other	5	2	0	0.060739	0.765
+SUFU	ENSG00000107882	10	102503972	102633535	3 - CHD + renal anomaly, single-disease	Other	4	1	0	1.0	0.214
+TRIM8	ENSG00000171206	10	102644479	102658318	3 - CHD + renal anomaly, single-disease	Other	1	2	0	1.0	0.291
+ARL3	ENSG00000138175	10	102673731	102714397	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.93	0.557
+SMC3	ENSG00000108055	10	110567695	110606048	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	1.0	0.132
+BBIP1	ENSG00000214413	10	110898730	110919180	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	2	0.073605	1.693
+SHOC2	ENSG00000108061	10	110919604	111013665	3 - CHD + renal anomaly, single-disease	RAS-MAPK (RASopathy)	2	1	0	1.0	0.201
+FGFR2	ENSG00000066468	10	121478332	121598444	2 - CHD + renal anomaly, multi-disease	Other	4	5	0	1.0	0.278
+BUB3	ENSG00000154473	10	123154402	123170467	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00065367	0.77
+EBF3	ENSG00000108001	10	129835233	129964274	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0	0.353
+HRAS	ENSG00000174775	11	532242	535576	1 - CHD + renal anomaly + documented CKD	RAS-MAPK (RASopathy)	2	2	1	0.017283	0.893
+PNPLA2	ENSG00000177666	11	818914	825573	3 - CHD + renal anomaly, single-disease	Other	3	1	0	2.7218e-09	1.221
+IGF2	ENSG00000167244	11	2129117	2139389	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.96	0.496
+INS	ENSG00000254647	11	2159779	2161209	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.019816	1.195
+KCNQ1	ENSG00000053918	11	2445008	2849105	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0954e-12	0.915
+CDKN1C	ENSG00000129757	11	2883218	2885775	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.00043741	1.943
+PGAP2	ENSG00000148985	11	3808560	3826371	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00010679	0.871
+DCHS1	ENSG00000166341	11	6621330	6655809	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.33407	0.491
+RRAS2	ENSG00000133818	11	14277922	14359183	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.031055	1.246
+KCNJ11	ENSG00000187486	11	17385248	17388659	3 - CHD + renal anomaly, single-disease	Other	3	1	0	0.0015654	1.074
+ABCC8	ENSG00000006071	11	17392885	17476845	3 - CHD + renal anomaly, single-disease	Other	3	1	0	9.5344e-33	0.829
+SAA1	ENSG00000173432	11	18266264	18269967	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.02592	1.293
+FANCF	ENSG00000183161	11	22622533	22625823	1 - CHD + renal anomaly + documented CKD	Other	2	2	1		
+WT1	ENSG00000184937	11	32387775	32435539	1 - CHD + renal anomaly + documented CKD	Developmental TF (CAKUT/CHD syndromes)	2	8	6	1.0	0.253
+PEX16	ENSG00000121680	11	45909663	45917877	3 - CHD + renal anomaly, single-disease	Peroxisomal	3	1	0	9.9638e-10	0.957
+TMEM216	ENSG00000187049	11	61392587	61398846	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	4	2	0.00011783	1.453
+MYRF	ENSG00000124920	11	61752636	61788518	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.215
+GANAB	ENSG00000089597	11	62624829	62646613	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	1	2	1	1.0	0.391
+BSCL2	ENSG00000168000	11	62690275	62707424	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.4505e-10	0.869
+MEN1	ENSG00000133895	11	64803516	64810551	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.0	0.206
+DPF2	ENSG00000133884	11	65333852	65354262	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.287
+KAT5	ENSG00000172977	11	65712252	65719604	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.027252	0.594
+FIBP	ENSG00000172500	11	65883740	65888471	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.9227e-07	1.009
+SF3B2	ENSG00000087365	11	66052364	66069308	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.252
+PACS1	ENSG00000175115	11	66070272	66244744	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.3
+BBS1	ENSG00000174483	11	66510635	66533598	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	1	1	5.6877e-17	1.003
+AIP	ENSG00000110711	11	67483026	67491103	3 - CHD + renal anomaly, single-disease	Other	3	1	0	0.28135	0.626
+LRP5	ENSG00000162337	11	68312591	68449275	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.9406	0.482
+CCND1	ENSG00000110092	11	69641156	69654474	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.7209	0.609
+CLPB	ENSG00000162129	11	72285495	72434531	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00035321	0.643
+C2CD3	ENSG00000168014	11	74012718	74171002	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.8824e-14	0.637
+AMOTL1	ENSG00000166025	11	94768356	94876748	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.0029055	0.581
+CEP57	ENSG00000166037	11	95790498	95832693	3 - CHD + renal anomaly, single-disease	Other	2	1	0	6.8356e-06	0.74
+MMP1	ENSG00000196611	11	102789919	102798160	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.3919e-15	1.291
+ALKBH8	ENSG00000137760	11	107502727	107565735	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.7075e-05	0.797
+ALG9	ENSG00000086848	11	111782195	111871581	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	4	4	1	1.3976e-12	0.853
+SDHD	ENSG00000204370	11	112086873	112095794	2 - CHD + renal anomaly, multi-disease	Mitochondrial / OXPHOS	2	2	0	0.90513	0.581
+APOA1	ENSG00000118137	11	116835751	116837622	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	5.3313e-07	1.168
+KMT2A	ENSG00000118058	11	118436492	118526832	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.065
+DDX6	ENSG00000110367	11	118747763	118791164	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.128
+CBL	ENSG00000110395	11	119206339	119308149	3 - CHD + renal anomaly, single-disease	RAS-MAPK (RASopathy)	2	1	0	0.00033116	0.622
+TMEM218	ENSG00000150433	11	125094389	125111626	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.12399	1.214
+KCNJ5	ENSG00000120457	11	128891356	128921163	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.0081482	0.912
+TULP3	ENSG00000078246	12	2890891	2941138	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2493e-09	1.059
+CCND2	ENSG00000118971	12	4273762	4305353	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99932	0.385
+KCNA1	ENSG00000111262	12	4909905	4918256	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0001067	0.935
+ATN1	ENSG00000111676	12	6927959	6942321	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.352
+GDF3	ENSG00000184344	12	7689784	7695775	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0010543	1.513
+KLRC4	ENSG00000183542	12	10407384	10409757	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.10838	0.91
+WBP11	ENSG00000084463	12	14784582	14803478	3 - CHD + renal anomaly, single-disease	Ciliopathy / nephronophthisis	1	1	0	1.0	0.321
+KRAS	ENSG00000133703	12	25205246	25250929	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	8	4	0	0.99914	0.264
+IPO8	ENSG00000133704	12	30628988	30695869	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.15221	0.575
+ARID2	ENSG00000189079	12	45729706	45908037	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.224
+KMT2D	ENSG00000167548	12	49018978	49060794	1 - CHD + renal anomaly + documented CKD	Chromatin / histone modifier	3	2	1	1.0	0.141
+SMARCD1	ENSG00000066117	12	50085342	50100707	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.339
+COX14	ENSG00000178449	12	50112236	50120453	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	1	1	0	0.21849	1.203
+RPS26	ENSG00000197728	12	56041918	56044697	2 - CHD + renal anomaly, multi-disease	Ribosomopathy	2	2	0	0.99588	0.32
+ERBB3	ENSG00000065361	12	56080165	56103505	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.6217e-16	0.695
+SMARCC2	ENSG00000139613	12	56162359	56189483	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.167
+PAN2	ENSG00000135473	12	56316936	56334000	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.6351e-06	0.594
+PRIM1	ENSG00000198056	12	56731580	56752323	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00079834	0.824
+GLI1	ENSG00000111087	12	57459785	57472268	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.318e-07	0.704
+LEMD3	ENSG00000174106	12	65169583	65248355	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.40017	0.584
+IFNG	ENSG00000111537	12	68154768	68159740	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	0.10704	1.095
+RAP1B	ENSG00000127314	12	68610899	68671901	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99938	0.185
+NUP107	ENSG00000111581	12	68686978	68745809	1 - CHD + renal anomaly + documented CKD	Other	2	3	3	2.8313e-09	0.833
+BBS10	ENSG00000179941	12	76344474	76348415	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	2	2	1.219e-05	1.418
+CEP290	ENSG00000198707	12	88049016	88142088	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	5	6	1.2493e-48	1.094
+GNPTAB	ENSG00000111670	12	101745499	101830959	3 - CHD + renal anomaly, single-disease	Other	4	1	0	1.5001e-13	0.8
+PAH	ENSG00000171759	12	102836889	102917244	3 - CHD + renal anomaly, single-disease	Other	1	1	0	9.094700000000001e-20	1.265
+TCTN1	ENSG00000204852	12	110614129	110649430	3 - CHD + renal anomaly, single-disease	Other	2	1	0	8.6642e-18	1.133
+PTPN11	ENSG00000179295	12	112418947	112509918	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	4	3	0	1.0	0.156
+TBX3	ENSG00000135111	12	114670255	114684175	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99465	0.468
+WSB2	ENSG00000176871	12	118032687	118061179	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99998	0.363
+KDM2B	ENSG00000089094	12	121429096	121581023	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.266
+TCTN2	ENSG00000168778	12	123671113	123708399	2 - CHD + renal anomaly, multi-disease	Other	3	2	0	6.054e-18	0.992
+POLE	ENSG00000177084	12	132623762	132687342	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.7396e-38	0.75
+ZMYM2	ENSG00000121741	13	19958727	20089115	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.96384	0.482
+PDX1	ENSG00000139515	13	27920000	27926313	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0033698	1.642
+B3GLCT	ENSG00000187676	13	31199975	31332276	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	3.9184e-09	1.109
+BRCA2	ENSG00000139618	13	32315508	32400268	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	6.5274e-44	0.803
+ALG5	ENSG00000120697	13	36949738	36999340	1 - CHD + renal anomaly + documented CKD	Other	1	2	2	0.015945	0.823
+WBP4	ENSG00000120688	13	41061509	41084006	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.4544e-09	0.971
+LACC1	ENSG00000179630	13	43879904	43893932	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.3918e-07	1.158
+UBAC2	ENSG00000134882	13	99200854	99386504	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00013582	0.859
+ZIC2	ENSG00000043355	13	99981784	99986765	3 - CHD + renal anomaly, single-disease	Other	5	1	0	0.96497	0.52
+LIG4	ENSG00000174405	13	108207442	108215536	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00015627	1.043
+RPGRIP1	ENSG00000092200	14	21280083	21351301	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2162e-20	0.918
+SLC7A7	ENSG00000155465	14	22773222	22815435	1 - CHD + renal anomaly + documented CKD	Other	1	1	2	1.3733e-10	1.007
+SRP54	ENSG00000100883	14	34982992	35029567	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99999	0.304
+PPP2R3C	ENSG00000092020	14	35085472	35121990	3 - CHD + renal anomaly, single-disease	Other	1	2	0	5.6221e-07	0.955
+TOGARAM1	ENSG00000198718	14	44962190	45074431	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.9374e-15	0.724
+FANCM	ENSG00000187790	14	45135930	45200890	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	2.395e-13	0.754
+RPS29	ENSG00000213741	14	49583577	49586380	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.98428	0.308
+SOS2	ENSG00000100485	14	50117130	50231578	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99989	0.415
+BMP4	ENSG00000125378	14	53949736	53956825	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99998	0.258
+KIAA0586	ENSG00000100578	14	58427719	58551297	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	8.5316e-14	0.968
+DACT1	ENSG00000165617	14	58637962	58648321	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.16566	0.703
+JKAMP	ENSG00000050130	14	59484517	59505410	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.66184	0.677
+MAX	ENSG00000125952	14	65075127	65102517	3 - CHD + renal anomaly, single-disease	Other	1	3	0	0.99819	0.288
+FUT8	ENSG00000033170	14	65412730	65744121	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0026169	0.667
+POMT2	ENSG00000009830	14	77274956	77320883	3 - CHD + renal anomaly, single-disease	Other	3	1	0	3.911e-20	0.944
+TTC8	ENSG00000165533	14	88824651	88877988	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	2	1	5.2419e-08	0.8
+PSMC1	ENSG00000100764	14	90256553	90275429	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.258
+FBLN5	ENSG00000140092	14	91869411	91947694	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.25042	0.58
+YY1	ENSG00000100811	14	100239144	100282788	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.2
+DLK1	ENSG00000185559	14	100726892	100738224	3 - CHD + renal anomaly, single-disease	Other	3	1	0	0.9948	0.461
+RTL1	ENSG00000254656	14	100879753	100903722	3 - CHD + renal anomaly, single-disease	Other	3	1	0	0.31636	1.869
+CDC42BPB	ENSG00000198752	14	102932380	103057549	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.235
+PLD4	ENSG00000166428	14	104924879	104933236	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	2.0155e-24	1.583
+BRF1	ENSG00000185024	14	105209286	105301001	3 - CHD + renal anomaly, single-disease	Other	2	1	0	3.1018e-15	0.921
+SPRED1	ENSG00000166068	15	38252836	38357249	3 - CHD + renal anomaly, single-disease	RAS-MAPK (RASopathy)	1	1	0	0.98383	0.496
+BUB1B	ENSG00000156970	15	40161069	40221123	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	2.5766e-14	0.707
+CHST14	ENSG00000169105	15	40470984	40473158	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.0044188	0.917
+RAD51	ENSG00000051180	15	40695174	40732340	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.99531	0.467
+DLL4	ENSG00000128917	15	40929340	40939073	3 - CHD + renal anomaly, single-disease	NOTCH signalling	2	1	0	1.0	0.197
+B2M	ENSG00000166710	15	44711517	44718145	1 - CHD + renal anomaly + documented CKD	Other	2	1	1	0.96577	0.501
+FBN1	ENSG00000166147	15	48408313	48645709	3 - CHD + renal anomaly, single-disease	ECM / basement membrane	12	1	0	1.0	0.105
+DMXL2	ENSG00000104093	15	51447791	51622771	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.36
+RFX7	ENSG00000181827	15	56087280	56243879	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.3
+MAP2K1	ENSG00000169032	15	66386912	66491544	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	4	2	0	0.96737	0.515
+BBS4	ENSG00000140463	15	72686207	72738473	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	2	1	6.813e-12	0.953
+FBXO22	ENSG00000167196	15	75903878	75942511	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.36241	0.683
+ETFA	ENSG00000140374	15	76215353	76311469	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0029774	1.166
+SCAPER	ENSG00000140386	15	76347904	76905340	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	2.1156e-11	0.666
+FAH	ENSG00000103876	15	80152999	80186349	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.8906e-12	1.067
+RPS17	ENSG00000182774	15	82536750	82540457	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	0.99969	0.17
+FANCI	ENSG00000140525	15	89243979	89317131	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	8.6548e-36	0.959
+KIF7	ENSG00000166813	15	89627977	89655467	3 - CHD + renal anomaly, single-disease	Other	2	1	0	3.0938e-31	1.038
+MCTP2	ENSG00000140563	15	94231561	94483952	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.356e-26	1.328
+TM2D3	ENSG00000184277	15	101641848	101652381	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.0744e-13	1.57
+CAPN15	ENSG00000103326	16	527712	554636	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.819e-14	0.974
+PIGQ	ENSG00000007541	16	569968	584109	3 - CHD + renal anomaly, single-disease	Other	1	2	0	6.7802e-18	1.295
+CLCN7	ENSG00000103249	16	1444935	1475028	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2342e-12	0.821
+IFT140	ENSG00000187535	16	1510427	1612072	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	5	5	8.685900000000001e-35	0.972
+TSC2	ENSG00000103197	16	2047985	2089491	1 - CHD + renal anomaly + documented CKD	Other	3	3	1	1.0	0.203
+PKD1	ENSG00000008710	16	2088708	2135898	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	2	2	2	1.0	0.364
+TBC1D24	ENSG00000162065	16	2475127	2505730	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	8.508e-16	1.214
+THOC6	ENSG00000131652	16	3024035	3027750	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	3.8005e-09	0.872
+MEFV	ENSG00000103313	16	3242027	3256633	1 - CHD + renal anomaly + documented CKD	Other	5	4	3	2.305e-19	1.147
+SLX4	ENSG00000188827	16	3581181	3611606	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	5.1228e-29	0.896
+DNASE1	ENSG00000213918	16	3654691	3658095	3 - CHD + renal anomaly, single-disease	Other	1	2	0	5.4406e-16	1.46
+CREBBP	ENSG00000005339	16	3725054	3880713	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	4	3	0	1.0	0.101
+PMM2	ENSG00000140650	16	8797839	8849325	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	5.5214e-08	1.937
+ERCC4	ENSG00000175595	16	13920154	13952348	1 - CHD + renal anomaly + documented CKD	Other	2	1	3	3.5282e-11	0.984
+ABCC6	ENSG00000091262	16	16149565	16223494	2 - CHD + renal anomaly, multi-disease	Other	6	4	0	1.2351e-33	0.917
+RPS15A	ENSG00000134419	16	18781295	18790334	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.68289	0.948
+COQ7	ENSG00000167186	16	19067614	19080095	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.0603e-06	1.247
+PALB2	ENSG00000083093	16	23603165	23641310	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	1.2379000000000001e-19	0.9
+SH2B1	ENSG00000178188	16	28863843	28874205	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.99999	0.374
+SRCAP	ENSG00000080603	16	30699171	30741409	1 - CHD + renal anomaly + documented CKD	Chromatin / histone modifier	2	2	1	1.0	0.223
+ZNF423	ENSG00000102935	16	49487524	49856112	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	1	1.0	0.196
+HEATR3	ENSG00000155393	16	50065970	50107272	3 - CHD + renal anomaly, single-disease	Other	2	1	0	4.2572e-14	1.157
+NOD2	ENSG00000167207	16	50693606	50733075	1 - CHD + renal anomaly + documented CKD	Other	3	1	1	2.3753999999999997e-22	1.033
+SALL1	ENSG00000103449	16	51135982	51151270	1 - CHD + renal anomaly + documented CKD	Developmental TF (CAKUT/CHD syndromes)	2	2	2	1.0	0.228
+RPGRIP1L	ENSG00000103494	16	53598153	53703859	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	5	4	4.2917e-23	0.907
+GNAO1	ENSG00000087258	16	56191489	56357444	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.105
+BBS2	ENSG00000125124	16	56484385	56520024	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	3	2	6.2071e-15	0.892
+SLC12A3	ENSG00000070915	16	56865207	56915850	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.8780999999999985e-28	1.004
+GINS3	ENSG00000181938	16	58392471	58406147	3 - CHD + renal anomaly, single-disease	Other	1	1	0	9.8249e-06	1.336
+HSD11B2	ENSG00000176387	16	67431121	67437553	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	3.3874e-07	1.204
+VAC14	ENSG00000103043	16	70687439	70801158	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.7656e-06	0.681
+RFWD3	ENSG00000168411	16	74621399	74666877	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.0781e-15	0.931
+TMEM231	ENSG00000205084	16	75536741	75556252	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	4	1	2.6458e-09	1.41
+FOXC2	ENSG00000176692	16	86566829	86569728	3 - CHD + renal anomaly, single-disease	Developmental TF (CAKUT/CHD syndromes)	1	1	0	0.00066521	1.807
+CTU2	ENSG00000174177	16	88706503	88715396	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.4023000000000005e-34	1.535
+FANCA	ENSG00000187741	16	89737549	89816647	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	1.7064999999999998e-87	1.344
+MED11	ENSG00000161920	17	4731428	4733607	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2811e-08	1.836
+KIAA0753	ENSG00000198920	17	6578147	6640711	1 - CHD + renal anomaly + documented CKD	Other	2	3	1	3.4291e-23	1.071
+KDM6B	ENSG00000132510	17	7834217	7854796	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.211
+TMEM107	ENSG00000179029	17	8172457	8176380	3 - CHD + renal anomaly, single-disease	Other	1	2	0	5.4756e-07	1.493
+RPL26	ENSG00000161970	17	8377516	8383193	2 - CHD + renal anomaly, multi-disease	Ribosomopathy	2	2	0	0.99381	0.258
+MYOCD	ENSG00000141052	17	12665890	12768949	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0	0.395
+PIGL	ENSG00000108474	17	16217210	16326411	2 - CHD + renal anomaly, multi-disease	Other	2	3	0	9.8416e-05	1.239
+FLCN	ENSG00000154803	17	17212212	17237168	3 - CHD + renal anomaly, single-disease	Other	1	3	0	0.9891	0.487
+RAI1	ENSG00000108557	17	17681458	17811453	2 - CHD + renal anomaly, multi-disease	Other	4	4	0	1.0	0.129
+B9D1	ENSG00000108641	17	19343175	19362723	2 - CHD + renal anomaly, multi-disease	Ciliopathy / nephronophthisis	2	3	0	0.00010346	1.023
+NEK8	ENSG00000160602	17	28728788	28743455	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	5	4	1.7709e-11	0.835
+NF1	ENSG00000196712	17	31094977	31377675	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	5	4	0	0.99946	0.449
+NEUROD2	ENSG00000171532	17	39603768	39607920	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.26507	0.897
+SMARCE1	ENSG00000073584	17	40624962	40647818	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99994	0.318
+MLX	ENSG00000108788	17	42567100	42573203	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.076914	0.694
+RPL27	ENSG00000131469	17	42998419	43002959	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	0.99376	0.259
+BRCA1	ENSG00000012048	17	43044295	43125364	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.5474e-34	0.885
+MEOX1	ENSG00000005102	17	43640389	43661922	3 - CHD + renal anomaly, single-disease	Other	2	1	0	5.4063e-05	1.142
+G6PC3	ENSG00000141349	17	44070735	44076344	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.3335e-08	1.008
+SLC4A1	ENSG00000004939	17	44248390	44268135	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.99999	0.407
+KANSL1	ENSG00000120071	17	46029916	46193429	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.325
+WNT3	ENSG00000108379	17	46762506	46818692	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.99982	0.367
+SPOP	ENSG00000121067	17	49598884	49678097	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99995	0.377
+MKS1	ENSG00000011143	17	58205441	58219255	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	5	3	1	1.0926000000000002e-19	0.991
+TBX4	ENSG00000121075	17	61452422	61485110	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99997	0.379
+BRIP1	ENSG00000136492	17	61679139	61863528	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	8.7115e-19	0.848
+STRADA	ENSG00000266173	17	63702832	63741799	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.0078763	0.649
+PSMD12	ENSG00000197170	17	67337916	67366577	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.232
+PRKAR1A	ENSG00000108946	17	68512430	68533431	3 - CHD + renal anomaly, single-disease	Other	4	1	0	1.0	0.158
+KCNJ2	ENSG00000123700	17	70169532	70180044	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.37571	0.651
+SOX9	ENSG00000125398	17	72121020	72126416	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.154
+COG1	ENSG00000166685	17	73193055	73208507	1 - CHD + renal anomaly + documented CKD	Other	2	1	1	6.1028e-11	0.718
+FAAP100	ENSG00000185504	17	81539891	81552353	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	8.6804e-14	1.076
+TGIF1	ENSG00000177426	18	3450172	3459978	3 - CHD + renal anomaly, single-disease	Other	5	1	0	0.98151	0.477
+PIEZO2	ENSG00000154864	18	10670247	11149569	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	2.1757e-15	0.563
+KCTD1	ENSG00000134504	18	26454910	26548553	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.089058	0.606
+SETBP1	ENSG00000152217	18	44680888	45068510	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.143
+EPG5	ENSG00000152223	18	45847609	45967329	3 - CHD + renal anomaly, single-disease	Other	3	1	0	1.6929e-14	0.58
+CCBE1	ENSG00000183287	18	59430939	59697423	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	2.2995e-08	0.933
+PIGN	ENSG00000197563	18	62041164	62187056	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	1.5077e-09	1.46
+RTTN	ENSG00000176225	18	70003031	70205687	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.4931e-22	0.786
+TXNL4A	ENSG00000141759	18	79970813	79988563	3 - CHD + renal anomaly, single-disease	Other	2	1	0	2.3119e-07	1.848
+PTBP1	ENSG00000011304	19	797452	812312	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.249
+PRTN3	ENSG00000196415	19	840999	848175	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	2.9672e-10	1.885
+MED16	ENSG00000175221	19	867963	893187	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0789999999999999e-29	1.302
+ATP5F1D	ENSG00000099624	19	1241751	1244825	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	2	1	0	2.429e-08	1.96
+APC2	ENSG00000115266	19	1450121	1473244	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	3.6028e-11	0.961
+ADAT3	ENSG00000213638	19	1905399	1913447	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00056981	1.929
+MAP2K2	ENSG00000126934	19	4090321	4124122	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	4	2	0	1.581e-05	0.858
+LONP1	ENSG00000196365	19	5691834	5720146	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	3	1	0	0.99964	0.448
+INSR	ENSG00000171105	19	7112265	7294414	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	0.00015345	0.556
+RPS28	ENSG00000233927	19	8321496	8323340	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.56144	0.908
+ZNF699	ENSG00000196110	19	9291140	9309838	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	8.0179e-08	1.414
+SMARCA4	ENSG00000127616	19	10961030	11062273	3 - CHD + renal anomaly, single-disease	Chromatin / histone modifier	2	1	0	1.0	0.226
+LDLR	ENSG00000130164	19	11089463	11133820	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2477e-30	1.091
+PRKCSH	ENSG00000130175	19	11435635	11450968	3 - CHD + renal anomaly, single-disease	Polycystic kidney disease	1	2	0	2.2611e-06	0.699
+WDR83OS	ENSG00000105583	19	12668073	12669415	3 - CHD + renal anomaly, single-disease	Other	1	1	0	3.7997e-06	1.598
+PRKACA	ENSG00000072062	19	14091688	14117762	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99999	0.338
+BRD4	ENSG00000141867	19	15235519	15332539	1 - CHD + renal anomaly + documented CKD	Other	2	1	1	1.0	0.191
+PIK3R2	ENSG00000105647	19	18153163	18170532	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.6831e-07	0.76
+MAU2	ENSG00000129933	19	19320829	19358754	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.175
+SCN1B	ENSG00000105711	19	35030470	35040449	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.19763	0.71
+TGFB1	ENSG00000105329	19	41330323	41353922	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.026363	0.682
+B9D2	ENSG00000123810	19	41354417	41364149	2 - CHD + renal anomaly, multi-disease	Ciliopathy / nephronophthisis	2	2	0	3.095e-08	1.518
+RPS19	ENSG00000105372	19	41860255	41872925	2 - CHD + renal anomaly, multi-disease	Ribosomopathy	2	2	0	0.99966	0.239
+BICRA	ENSG00000063169	19	47609134	47703277	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.027767	0.659
+RPL18	ENSG00000063177	19	48615331	48619178	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99901	0.365
+RRAS	ENSG00000126458	19	49635292	49640143	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00016583	1.175
+MED25	ENSG00000104973	19	49818289	49836979	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.489e-14	0.874
+PNKP	ENSG00000039650	19	49861204	49867576	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.5733e-34	1.527
+ETFB	ENSG00000105379	19	51345169	51366388	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.0928e-05	1.1
+RPS7	ENSG00000171863	2	3575260	3580920	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99613	0.317
+SOX11	ENSG00000176887	2	5692384	5701385	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.08649	1.148
+MYCN	ENSG00000134323	2	15940550	15947004	1 - CHD + renal anomaly + documented CKD	Other	3	2	1	0.99969	0.311
+WDR35	ENSG00000118965	2	19910263	19990105	1 - CHD + renal anomaly + documented CKD	Other	1	3	1	1.4175999999999998e-21	0.776
+APOB	ENSG00000084674	2	21001429	21044073	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.3512e-11	0.537
+DNMT3A	ENSG00000119772	2	25227874	25341925	3 - CHD + renal anomaly, single-disease	Other	2	1	0	3.0684e-146	1.998
+ASXL2	ENSG00000143970	2	25733753	25878487	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.239
+EMILIN1	ENSG00000138080	2	27078615	27086403	3 - CHD + renal anomaly, single-disease	Other	1	1	0	3.194e-10	0.832
+IFT172	ENSG00000138002	2	27444377	27489743	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	3	3	1.2319e-29	0.745
+SOS1	ENSG00000115904	2	38981549	39121051	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	2	2	0	1.0	0.288
+HAAO	ENSG00000162882	2	42767089	42792583	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.4081e-17	1.544
+DYNC2LI1	ENSG00000138036	2	43774039	43810010	1 - CHD + renal anomaly + documented CKD	Other	2	3	1	0.0082431	1.028
+ABCG5	ENSG00000138075	2	43812472	43838839	3 - CHD + renal anomaly, single-disease	Other	1	1	0	8.1322e-20	1.219
+ABCG8	ENSG00000143921	2	43838971	43882988	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.1931e-31	1.329
+SIX3	ENSG00000138083	2	44941702	44946071	3 - CHD + renal anomaly, single-disease	Other	6	1	0	0.99311	0.387
+FANCL	ENSG00000115392	2	58159247	58241325	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.6815e-17	1.444
+PEX13	ENSG00000162928	2	61017720	61051990	2 - CHD + renal anomaly, multi-disease	Peroxisomal	2	2	0	2.8784e-07	1.159
+WDPCP	ENSG00000143951	2	63119559	63588477	1 - CHD + renal anomaly + documented CKD	Other	3	1	1	2.1762e-16	0.939
+SPRED2	ENSG00000198369	2	65310851	65432599	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.6444e-15	1.361
+ALMS1	ENSG00000116127	2	73385836	73609916	1 - CHD + renal anomaly + documented CKD	Other	2	2	2	2.1295e-65	0.825
+GGCX	ENSG00000115486	2	85544720	85561493	3 - CHD + renal anomaly, single-disease	Other	2	1	0	2.2339e-15	0.888
+POLR1A	ENSG00000068654	2	86020216	86105886	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.90613	0.479
+RPL31	ENSG00000071082	2	101002289	101007267	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99795	0.217
+NPHP1	ENSG00000144061	2	110123348	110205013	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	5	6	4.482e-10	0.92
+BUB1	ENSG00000169679	2	110637528	110678063	3 - CHD + renal anomaly, single-disease	Other	2	1	0	7.3293e-13	0.727
+GLI2	ENSG00000074047	2	120735868	120992653	3 - CHD + renal anomaly, single-disease	Other	5	1	0	1.0	0.364
+UGGT1	ENSG00000136731	2	128091200	128195677	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.4921e-11	0.617
+KYNU	ENSG00000115919	2	142877664	143055833	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0563e-08	1.364
+ZEB2	ENSG00000169554	2	144384081	144520119	2 - CHD + renal anomaly, multi-disease	Other	3	2	0	1.0	0.114
+SCN2A	ENSG00000136531	2	165239414	165392304	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.161
+BBS5	ENSG00000163093	2	169479494	169506655	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	1	0.00025273	0.884
+HOXD13	ENSG00000128714	2	176092721	176095944	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00046099	0.957
+MTX2	ENSG00000128654	2	176269442	176338025	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00031555	1.103
+STAT1	ENSG00000115415	2	190969149	191014171	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.271
+STAT4	ENSG00000138378	2	191029576	191150994	1 - CHD + renal anomaly + documented CKD	Other	2	2	2	0.93457	0.503
+TMEM237	ENSG00000155755	2	201620186	201643503	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	2	2	1.0116e-14	1.318
+CTLA4	ENSG00000163599	2	203867771	203873965	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.99829	0.211
+IDH1	ENSG00000138413	2	208236229	208255071	3 - CHD + renal anomaly, single-disease	Other	1	1	0	9.2299e-05	0.829
+BCS1L	ENSG00000074582	2	218659683	218663443	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	1	1	0	2.6741e-10	0.958
+PDE6D	ENSG00000156973	2	231732433	231781282	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.22718	1.027
+HDAC4	ENSG00000068024	2	239048168	239401020	3 - CHD + renal anomaly, single-disease	Other	1	2	0	1.0	0.192
+MKKS	ENSG00000125863	20	10401009	10434222	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	4	1	9.952e-11	1.112
+JAG1	ENSG00000101384	20	10637684	10673999	1 - CHD + renal anomaly + documented CKD	NOTCH signalling	4	1	1	1.0	0.211
+TASP1	ENSG00000089123	20	13389394	13638932	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.96491	0.518
+MGME1	ENSG00000125871	20	17969018	17991122	3 - CHD + renal anomaly, single-disease	Other	2	1	0	9.2408e-07	0.932
+SLC32A1	ENSG00000101438	20	38724486	38729372	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99954	0.396
+PIGT	ENSG00000124155	20	45416141	45426241	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0109e-16	1.084
+ADNP	ENSG00000101126	20	50888918	50931437	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.106
+SALL4	ENSG00000101115	20	51782331	51802521	2 - CHD + renal anomaly, multi-disease	Developmental TF (CAKUT/CHD syndromes)	3	3	0	1.0	0.184
+ATP5F1E	ENSG00000124172	20	59025475	59032335	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	2	1	0	0.017126	1.654
+LAMA5	ENSG00000130702	20	62309065	62367312	1 - CHD + renal anomaly + documented CKD	ECM / basement membrane	1	2	2	6.0670000000000006e-58	0.779
+SCAF4	ENSG00000156304	21	31671000	31732118	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.285
+SON	ENSG00000159140	21	33543038	33577481	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.051
+PIGP	ENSG00000185808	21	37065374	37073071	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2246e-06	1.937
+DYRK1A	ENSG00000157540	21	37366773	37526358	2 - CHD + renal anomaly, multi-disease	Other	2	3	0	1.0	0.172
+RIPK4	ENSG00000183421	21	41739373	41767052	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.62495	0.577
+COL18A1	ENSG00000182871	21	45405165	45513720	3 - CHD + renal anomaly, single-disease	ECM / basement membrane	1	1	0	8.591500000000001e-33	1.001
+ADA2	ENSG00000093072	22	17178790	17219435	2 - CHD + renal anomaly, multi-disease	Other	4	2	0	5.39e-06	0.879
+ATP6V1E1	ENSG00000131100	22	17592136	17628749	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0013179	0.852
+USP18	ENSG00000184979	22	18150170	18177397	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99638	0.459
+HIRA	ENSG00000100084	22	19330698	19431733	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.176
+UFD1	ENSG00000070010	22	19449911	19479193	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99902	0.438
+GP1BB	ENSG00000203618	22	19723539	19724771	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.010404	1.922
+TBX1	ENSG00000184058	22	19760778	19767334	1 - CHD + renal anomaly + documented CKD	Developmental TF (CAKUT/CHD syndromes)	7	3	1	0.123	0.703
+COMT	ENSG00000093010	22	19941772	19969975	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00049821	1.128
+ARVCF	ENSG00000099889	22	19969896	20016823	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.8287e-19	1.032
+PI4KA	ENSG00000241973	22	20707691	20858811	3 - CHD + renal anomaly, single-disease	Other	1	2	0	1.9549e-06	0.548
+LZTR1	ENSG00000099949	22	20982297	20999032	3 - CHD + renal anomaly, single-disease	RAS-MAPK (RASopathy)	3	1	0	4.991499999999999e-132	1.997
+MAPK1	ENSG00000100030	22	21759657	21867645	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99854	0.377
+SMARCB1	ENSG00000099956	22	23786966	23838009	3 - CHD + renal anomaly, single-disease	Chromatin / histone modifier	2	1	0	1.0	0.221
+MIF	ENSG00000240972	22	23894383	23895223	3 - CHD + renal anomaly, single-disease	Other	1	2	0	2.2681e-08	1.961
+SPECC1L	ENSG00000100014	22	24270831	24417738	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99995	0.434
+DEPDC5	ENSG00000100150	22	31754019	31908033	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.403
+IFT27	ENSG00000100360	22	36758211	36776119	1 - CHD + renal anomaly + documented CKD	Other	2	2	2	0.00040038	1.078
+SGSM3	ENSG00000100359	22	40370594	40410289	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.5618e-32	1.175
+EP300	ENSG00000100393	22	41092592	41180077	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	2	2	0	1.0	0.164
+TRNT1	ENSG00000072756	3	3126940	3149023	3 - CHD + renal anomaly, single-disease	Other	1	1	0	3.6366e-13	1.232
+ITPR1	ENSG00000150995	3	4493348	4847506	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.325
+CRELD1	ENSG00000163703	3	9933834	9945406	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.6352e-10	0.885
+FANCD2	ENSG00000144554	3	10026437	10101932	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	2.7719000000000002e-19	0.777
+VHL	ENSG00000134086	3	10141778	10153667	3 - CHD + renal anomaly, single-disease	Other	1	5	0	0.0019543	0.987
+RAF1	ENSG00000132155	3	12583601	12664117	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	6	2	0	1.0	0.353
+RBSN	ENSG00000131381	3	15070073	15099148	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.3732e-06	0.74
+RPL15	ENSG00000174748	3	23917132	23920989	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	0.99997	0.132
+LZTFL1	ENSG00000163818	3	45823316	45842119	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	2	2	0.0015497	0.874
+CCR1	ENSG00000163823	3	46201711	46208313	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.12123	1.931
+CRIPTO	ENSG00000241186	3	46577788	46582457	3 - CHD + renal anomaly, single-disease	Other	5	1	0		
+TREX1	ENSG00000213689	3	48466230	48467645	2 - CHD + renal anomaly, multi-disease	Other	4	3	0	0.00076781	1.265
+COL7A1	ENSG00000114270	3	48564073	48595329	1 - CHD + renal anomaly + documented CKD	ECM / basement membrane	2	1	1	1.4204e-56	0.69
+LAMB2	ENSG00000172037	3	49121114	49133050	1 - CHD + renal anomaly + documented CKD	ECM / basement membrane	1	3	3	2.2857e-18	0.652
+BAP1	ENSG00000163930	3	52401008	52410008	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.324
+TKT	ENSG00000163931	3	53224712	53256022	3 - CHD + renal anomaly, single-disease	Other	2	1	0	5.2193e-12	0.923
+CACNA1D	ENSG00000157388	3	53494611	53813733	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.253
+DNASE1L3	ENSG00000163687	3	58192257	58210972	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	5.593e-08	1.122
+GBE1	ENSG00000114480	3	81489703	81761645	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.475e-08	1.211
+ARL6	ENSG00000113966	3	97764758	97801229	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	0.0088078	0.956
+HGD	ENSG00000113924	3	120628172	120682239	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	7.0216e-14	1.199
+IFT122	ENSG00000163913	3	129440224	129520507	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	1	9.3639e-23	0.811
+NPHP3	ENSG00000113971	3	132680609	132722409	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	6	5	1.4470999999999998e-21	0.873
+STAG1	ENSG00000118007	3	136336236	136752378	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.159
+DBR1	ENSG00000138231	3	138160988	138174921	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.9606e-05	0.841
+MRAS	ENSG00000158186	3	138348579	138405533	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.99089	0.444
+MRPS22	ENSG00000175110	3	139344020	139357129	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	1	1	0	5.5448e-07	0.927
+RASA2	ENSG00000155903	3	141487027	141615344	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.9677e-36	1.484
+IL12A	ENSG00000168811	3	159988835	159996019	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00048215	1.132
+PLD1	ENSG00000075651	3	171600404	171810483	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.6495e-06	0.822
+PIK3CA	ENSG00000121879	3	179148357	179240093	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	1.0	0.221
+TRA2B	ENSG00000136527	3	185914558	185938014	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.95587	0.528
+DNAJB11	ENSG00000090520	3	186570720	186585793	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	1	2	2	0.00011029	0.933
+MASP1	ENSG00000127241	3	187234082	187291737	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.584e-13	0.874
+TP63	ENSG00000073282	3	189631389	189897276	2 - CHD + renal anomaly, multi-disease	Other	3	2	0	1.0	0.296
+CEP19	ENSG00000174007	3	196706277	196712250	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00012527	1.208
+RPL35A	ENSG00000182899	3	197950190	197956610	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	0.99874	0.202
+FGFR3	ENSG00000068078	4	1793293	1808867	3 - CHD + renal anomaly, single-disease	Other	3	1	0	0.99865	0.458
+NSD2	ENSG00000109685	4	1871393	1982192	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0	0.139
+EVC2	ENSG00000173040	4	5562439	5708559	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.7773e-47	1.092
+EVC	ENSG00000072840	4	5711201	5814305	3 - CHD + renal anomaly, single-disease	Other	2	1	0	6.2955e-37	1.134
+WFS1	ENSG00000109501	4	6269850	6303265	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.7214e-39	1.64
+CC2D2A	ENSG00000048342	4	15469882	15601552	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	4	3	6.8922e-26	0.854
+TAPT1	ENSG00000169762	4	16160505	16226471	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.13378	0.698
+SLC34A2	ENSG00000157765	4	25655851	25678748	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.154e-11	1.019
+RPL9	ENSG00000163682	4	39454124	39458922	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99998	0.131
+FRYL	ENSG00000075539	4	48497357	48780279	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99999	0.434
+ADAMTS3	ENSG00000156140	4	72280969	72569221	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2131e-09	0.67
+COQ2	ENSG00000173085	4	83263824	83284798	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.00017758	1.032
+SPP1	ENSG00000118785	4	87975714	87983411	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.7465e-07	1.335
+PKD2	ENSG00000118762	4	88007635	88077777	1 - CHD + renal anomaly + documented CKD	Polycystic kidney disease	2	2	2	0.00018979	0.683
+CENPE	ENSG00000138778	4	103105811	103198343	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99958	0.451
+TBCK	ENSG00000145348	4	106041599	106316209	3 - CHD + renal anomaly, single-disease	Other	1	1	0	3.1309e-14	1.062
+BBS7	ENSG00000138686	4	121824329	121870474	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	1	8.5502e-07	0.701
+BBS12	ENSG00000181004	4	122732704	122744939	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	2	1	0.0035062	1.419
+FAT4	ENSG00000196159	4	125314955	125492932	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	1.0	0.317
+SCLT1	ENSG00000151466	4	128883993	129093539	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.0024516	1.099
+EDNRA	ENSG00000151617	4	147481097	147544954	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99908	0.424
+ETFDH	ENSG00000171503	4	158672296	158709623	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.6935e-06	1.126
+NEK1	ENSG00000137601	4	169392809	169612583	3 - CHD + renal anomaly, single-disease	Other	2	1	0	9.1878e-23	0.959
+SDHA	ENSG00000073578	5	218320	257082	3 - CHD + renal anomaly, single-disease	Mitochondrial / OXPHOS	5	1	0	3.3694e-08	0.786
+TRIP13	ENSG00000071539	5	892884	918120	3 - CHD + renal anomaly, single-disease	Other	1	3	0	0.19213	0.592
+NSUN2	ENSG00000037474	5	6599239	6633044	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.8367e-15	0.965
+DNAJC21	ENSG00000168724	5	34929559	34958964	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0319e-16	1.083
+NIPBL	ENSG00000164190	5	36876769	37066413	1 - CHD + renal anomaly + documented CKD	Chromatin / histone modifier	2	2	1	1.0	0.057
+CPLANE1	ENSG00000197603	5	37106235	37249376	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	2.7962e-36	0.728
+ERCC8	ENSG00000049167	5	60866454	60945070	1 - CHD + renal anomaly + documented CKD	Other	1	1	3	1.7192e-11	1.608
+CWC27	ENSG00000153015	5	64768930	65018750	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	4.1569e-06	1.181
+XRCC4	ENSG00000152422	5	83077547	83353760	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2492e-07	1.032
+SKIC3	ENSG00000198677	5	95463894	95554977	2 - CHD + renal anomaly, multi-disease	Other	2	2	0		
+ARSK	ENSG00000164291	5	95555101	95605102	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.7322e-10	0.954
+ERAP1	ENSG00000164307	5	96774484	96807945	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.2589e-21	0.947
+LMNB1	ENSG00000113368	5	126777136	126837020	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.86621	0.55
+AFF4	ENSG00000072364	5	132875395	132963634	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	1.0	0.114
+TXNDC15	ENSG00000113621	5	134874371	134901635	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	2.4837e-06	0.975
+HSPA9	ENSG00000113013	5	138553756	138575401	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.86038	0.525
+SPINK5	ENSG00000133710	5	148063980	148137382	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.2594e-31	0.908
+CAMK2A	ENSG00000070808	5	150219491	150289773	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.187
+IL12B	ENSG00000113302	5	159314780	159330487	3 - CHD + renal anomaly, single-disease	Other	1	1	0	4.4538e-07	0.999
+FBXW11	ENSG00000072803	5	171861549	172006638	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.354
+NSD1	ENSG00000165671	5	177133773	177300213	1 - CHD + renal anomaly + documented CKD	Other	3	2	1	1.0	0.144
+RREB1	ENSG00000124782	6	7107961	7251980	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.366
+TBC1D7	ENSG00000145979	6	13304951	13328537	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.9197e-11	1.431
+SOX4	ENSG00000124766	6	21593751	21598619	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.78917	0.72
+HFE	ENSG00000010704	6	26087429	26098343	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0122e-09	1.037
+H4C3	ENSG00000197061	6	26103933	26104337	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.5501e-05	1.955
+H4C9	ENSG00000276180	6	27139282	27139678	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.083933	1.641
+HLA-B	ENSG00000234745	6	31353875	31357179	1 - CHD + renal anomaly + documented CKD	Other	5	2	3	7.5721e-05	1.853
+SKIC2	ENSG00000204351	6	31959175	31969751	3 - CHD + renal anomaly, single-disease	Other	1	1	0		
+C4A	ENSG00000244731	6	31982057	32002681	1 - CHD + renal anomaly + documented CKD	Other	1	3	1	0.10773	0.752
+TNXB	ENSG00000168477	6	32041153	32109338	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	7.7924e-31	0.674
+HLA-DRB1	ENSG00000196126	6	32578775	32589848	1 - CHD + renal anomaly + documented CKD	Other	3	3	3		
+HLA-DPA1	ENSG00000231389	6	33064569	33073649	1 - CHD + renal anomaly + documented CKD	Other	1	1	1		
+HLA-DPB1	ENSG00000223865	6	33075990	33089696	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	3.4263e-11	1.473
+RPS10	ENSG00000124614	6	34417454	34426069	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99983	0.265
+FANCE	ENSG00000112039	6	35452338	35467102	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	7.6995e-11	0.957
+MMUT	ENSG00000146085	6	49430360	49463253	1 - CHD + renal anomaly + documented CKD	Other	2	1	3	4.9198e-22	1.18
+CILK1	ENSG00000112144	6	53001303	53061824	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.5236e-07	0.774
+RAB23	ENSG00000112210	6	57186992	57222307	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.033359	0.838
+LMBRD1	ENSG00000168216	6	69674010	69797010	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.0849e-10	1.184
+RRAGD	ENSG00000025039	6	89364616	89412273	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	0.55965	0.63
+MAP3K7	ENSG00000135341	6	90513579	90587072	2 - CHD + renal anomaly, multi-disease	Other	4	2	0	0.99991	0.397
+FBXL4	ENSG00000112234	6	98868535	98947946	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.4718e-09	0.841
+SEC63	ENSG00000025796	6	107867756	107958208	3 - CHD + renal anomaly, single-disease	Polycystic kidney disease	1	1	0	0.90762	0.532
+FIG4	ENSG00000112367	6	109691296	109825426	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.3237e-16	0.966
+DSE	ENSG00000111817	6	116370947	116444861	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.062098	0.563
+TBC1D32	ENSG00000146350	6	121079494	121334480	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.5692e-24	0.984
+ENPP1	ENSG00000197594	6	131808020	131895155	2 - CHD + renal anomaly, multi-disease	Other	3	4	0	1.7403e-05	0.729
+AHI1	ENSG00000135541	6	135283532	135497740	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	3	1	1	2.6598000000000003e-30	1.069
+IFNGR1	ENSG00000027697	6	137197485	137219385	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00046256	0.881
+ARID1B	ENSG00000049618	6	156777378	157210779	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	2	2	0	1.0	0.205
+DLL1	ENSG00000198719	6	170282206	170291078	3 - CHD + renal anomaly, single-disease	Other	5	1	0	1.0	0.236
+INTS1	ENSG00000164880	7	1470277	1504389	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.0443e-30	0.785
+ACTB	ENSG00000075624	7	5527148	5530601	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.193
+IL6	ENSG00000136244	7	22727200	22731998	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.19986	0.881
+HOXA13	ENSG00000106031	7	27194364	27200091	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.98285	0.482
+BBS9	ENSG00000122507	7	33129564	33606069	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	2	6.721399999999999e-22	0.959
+GCK	ENSG00000106633	7	44144275	44189439	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.7468e-07	0.866
+GRB10	ENSG00000106070	7	50590068	50782896	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.365
+SBDS	ENSG00000126524	7	66987680	66995586	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	1.3519e-05	1.08
+FKBP6	ENSG00000077800	7	73328161	73358625	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	4.027e-06	1.068
+BAZ1B	ENSG00000009954	7	73440406	73522293	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0	0.201
+TBL2	ENSG00000106638	7	73567537	73578579	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.3839e-09	1.054
+MLXIPL	ENSG00000009950	7	73593202	73624522	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.2246e-11	0.884
+VPS37D	ENSG00000176428	7	73667831	73672110	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.26283	0.986
+DNAJC30	ENSG00000176410	7	73680918	73683453	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	5.877e-07	1.484
+BUD23	ENSG00000071462	7	73683597	73698212	1 - CHD + renal anomaly + documented CKD	Ribosomopathy	1	1	1	1.9186e-08	0.916
+STX1A	ENSG00000106089	7	73699210	73719669	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	0.99999	0.257
+METTL27	ENSG00000165171	7	73834590	73842516	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.7958e-12	1.717
+TMEM270	ENSG00000175877	7	73861159	73865890	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	4.1762e-11	1.392
+ELN	ENSG00000049540	7	74028173	74069907	1 - CHD + renal anomaly + documented CKD	ECM / basement membrane	5	3	2	7.6169e-10	0.696
+LIMK1	ENSG00000106683	7	74083804	74122525	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0	0.338
+EIF4H	ENSG00000106682	7	74174356	74197096	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.97569	0.507
+RFC2	ENSG00000049541	7	74231502	74254399	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00080984	1.394
+CLIP2	ENSG00000106665	7	74289407	74405935	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.9929	0.476
+GTF2IRD1	ENSG00000006704	7	74453906	74602605	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.0	0.309
+GTF2I	ENSG00000263001	7	74657718	74760692	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.99996	0.195
+NCF1	ENSG00000158517	7	74774011	74789315	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.82121	0.617
+GTF2IRD2	ENSG00000196275	7	74796151	74851605	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.40188	0.871
+SEMA3E	ENSG00000170381	7	83363238	83649139	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.7748e-06	0.668
+TRRAP	ENSG00000196367	7	98878532	99013241	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.115
+GNB2	ENSG00000172354	7	100673740	100679169	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99977	0.372
+CFTR	ENSG00000001626	7	117480025	117668665	3 - CHD + renal anomaly, single-disease	Other	1	2	0	2.3757e-39	1.152
+CEP41	ENSG00000106477	7	130393771	130441016	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.00023358	1.066
+BRAF	ENSG00000157764	7	140719337	140924929	2 - CHD + renal anomaly, multi-disease	RAS-MAPK (RASopathy)	7	4	0	1.0	0.237
+PRKAG2	ENSG00000106617	7	151556127	151877115	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.19664	0.582
+XRCC2	ENSG00000196584	7	152644776	152676141	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.5001e-07	1.209
+SHH	ENSG00000164690	7	155799980	155812463	2 - CHD + renal anomaly, multi-disease	Other	5	2	0	0.97518	0.493
+NCAPG2	ENSG00000146918	7	158631169	158704804	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99989	0.441
+DYNC2I1	ENSG00000126870	7	158856558	158946189	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	2	1	2.2708e-17	0.802
+ERI1	ENSG00000104626	8	9002897	9033338	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	4.2781e-07	1.526
+ATP6V1B2	ENSG00000147416	8	20197381	20221696	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99842	0.457
+RHOBTB2	ENSG00000008853	8	22999548	23020199	3 - CHD + renal anomaly, single-disease	Other	2	1	0	1.8612e-06	0.761
+EXTL3	ENSG00000012232	8	28701501	28755599	3 - CHD + renal anomaly, single-disease	Other	1	2	0	0.92595	0.511
+FGFR1	ENSG00000077782	8	38411143	38468635	2 - CHD + renal anomaly, multi-disease	Other	5	3	0	1.0	0.274
+KAT6A	ENSG00000083168	8	41929479	42051987	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	2	2	0	1.0	0.083
+SOX17	ENSG00000164736	8	54457935	54460892	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.86139	0.614
+RPS20	ENSG00000008988	8	56073054	56074506	3 - CHD + renal anomaly, single-disease	Ribosomopathy	2	1	0	0.9668	0.481
+CHD7	ENSG00000171316	8	60678740	60868028	2 - CHD + renal anomaly, multi-disease	Chromatin / histone modifier	2	3	0	1.0	0.109
+CSPP1	ENSG00000104218	8	67064392	67196614	1 - CHD + renal anomaly + documented CKD	Other	2	3	1	1.8241e-09	0.876
+PEX2	ENSG00000164751	8	76980258	77000078	2 - CHD + renal anomaly, multi-disease	Peroxisomal	3	2	0	1.7994e-05	1.057
+TMEM67	ENSG00000164953	8	93754894	93818121	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	2	9	7	3.1439e-18	1.079
+CFAP418	ENSG00000156172	8	95244913	95269201	1 - CHD + renal anomaly + documented CKD	Other	1	2	1	1.7648e-05	1.642
+GDF6	ENSG00000156466	8	96142333	96160806	3 - CHD + renal anomaly, single-disease	Developmental TF (CAKUT/CHD syndromes)	1	2	0	0.99958	0.342
+RSPO2	ENSG00000147655	8	107899316	108083620	3 - CHD + renal anomaly, single-disease	Other	2	1	0	0.2904	0.668
+RAD21	ENSG00000164754	8	116845934	116874776	1 - CHD + renal anomaly + documented CKD	Other	3	2	1	1.0	0.341
+WASHC5	ENSG00000164961	8	125024260	125091792	2 - CHD + renal anomaly, multi-disease	Other	2	2	0	5.0212e-14	0.792
+PUF60	ENSG00000179950	8	143816344	143829315	2 - CHD + renal anomaly, multi-disease	Other	3	3	0	1.0	0.295
+PLEC	ENSG00000178209	8	143915153	143939597	3 - CHD + renal anomaly, single-disease	Other	1	1	0	5.951e-44	0.726
+FOXH1	ENSG00000160973	8	144473412	144475849	3 - CHD + renal anomaly, single-disease	Other	5	1	0	8.7986e-06	1.608
+RECQL4	ENSG00000160957	8	144511288	144517833	3 - CHD + renal anomaly, single-disease	Other	2	1	0	5.7709e-69	1.519
+RPL8	ENSG00000161016	8	144789769	144792390	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99996	0.137
+DMRT2	ENSG00000173253	9	1050357	1057552	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.9527e-11	1.279
+FREM1	ENSG00000164946	9	14737152	14910428	3 - CHD + renal anomaly, single-disease	ECM / basement membrane	1	2	0	2.6458999999999997e-52	1.157
+FOCAD	ENSG00000188352	9	20684259	20995950	3 - CHD + renal anomaly, single-disease	Other	1	1	0	6.8573e-37	0.958
+IFT74	ENSG00000096872	9	26956412	27066134	1 - CHD + renal anomaly + documented CKD	Other	2	1	1	5.5812e-09	1.508
+TOPORS	ENSG00000197579	9	32540544	32552586	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.99997	0.418
+APTX	ENSG00000137074	9	32972616	33001628	3 - CHD + renal anomaly, single-disease	Other	1	1	0	2.0655e-07	0.973
+FANCG	ENSG00000221829	9	35073839	35079942	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	1.5160000000000003e-20	1.05
+PIGO	ENSG00000165282	9	35088688	35096591	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.7784e-16	0.89
+HNRNPK	ENSG00000165119	9	83968083	83980215	1 - CHD + renal anomaly + documented CKD	Other	2	3	1	0.99995	0.242
+GAS1	ENSG00000180447	9	86944362	86947506	3 - CHD + renal anomaly, single-disease	Other	5	1	0	0.00071229	1.795
+FANCC	ENSG00000158169	9	95099054	95317709	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	2.6625e-14	1.022
+PTCH1	ENSG00000185920	9	95442980	95509266	3 - CHD + renal anomaly, single-disease	Other	8	1	0	1.0	0.146
+ANKS6	ENSG00000165138	9	98732009	98796555	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	1	1	4.1775e-10	0.869
+INVS	ENSG00000119509	9	100099243	100302175	1 - CHD + renal anomaly + documented CKD	Ciliopathy / nephronophthisis	1	2	2	1.7464e-21	0.941
+FKTN	ENSG00000106692	9	105558131	105641118	3 - CHD + renal anomaly, single-disease	Other	4	1	0	1.5042e-05	1.022
+TRIM32	ENSG00000119401	9	116687305	116701299	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.0070294	0.73
+TLR4	ENSG00000136869	9	117704403	117724735	1 - CHD + renal anomaly + documented CKD	Other	1	1	1	0.00041066	0.858
+GSN	ENSG00000148180	9	121268162	121332842	1 - CHD + renal anomaly + documented CKD	Other	2	1	2	2.3482e-09	0.788
+CRB2	ENSG00000148204	9	123356197	123378753	1 - CHD + renal anomaly + documented CKD	Other	1	3	2	1.0688999999999999e-28	1.202
+NR6A1	ENSG00000148200	9	124517275	124771311	3 - CHD + renal anomaly, single-disease	Other	1	1	0	1.0	0.193
+RPL35	ENSG00000136942	9	124857883	124861957	3 - CHD + renal anomaly, single-disease	Ribosomopathy	1	1	0	0.99253	0.391
+POMT1	ENSG00000130714	9	131502918	131523799	3 - CHD + renal anomaly, single-disease	Other	4	1	0	7.2486e-26	1.002
+TSC1	ENSG00000165699	9	132891349	132944616	1 - CHD + renal anomaly + documented CKD	Other	3	3	1	1.0	0.227
+MYMK	ENSG00000187616	9	133514586	133524959	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.0025746	1.02
+INPP5E	ENSG00000148384	9	136428619	136439845	1 - CHD + renal anomaly + documented CKD	Other	2	2	1	1.1997e-11	1.179
+AGPAT2	ENSG00000169692	9	136673143	136687457	3 - CHD + renal anomaly, single-disease	Other	1	1	0	7.177e-06	1.199
+GRIN1	ENSG00000176884	9	137139154	137168756	3 - CHD + renal anomaly, single-disease	Other	1	1	0	0.018437	0.574
+EHMT1	ENSG00000181090	9	137619005	137836127	1 - CHD + renal anomaly + documented CKD	Other	3	1	1	1.0	0.159
