@@ -29,11 +29,8 @@ import numpy as np
 RAW = "../rawdata"
 OUT_GENES = "../data/genes"
 
-# import the ontology helpers we already wrote in script 03
-import importlib.util
-spec = importlib.util.spec_from_file_location("hpo", "03_hpo_analysis.py")
-# (we do not actually execute script 03 here - we just copy the two
-#  functions below so this script can stand on its own)
+# The two functions below are the same ones used in script 03. They are
+# copied here rather than imported so that this script works on its own.
 
 
 def read_ontology(filename):

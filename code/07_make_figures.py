@@ -12,9 +12,12 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use("Agg")          # we are saving files, not opening windows
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.stats import chi2, binomtest
+
+import palette
+from palette import INK, MUTED, HAIRLINE
 
 # ----------------------------------------------------------------------
 # Settings that are the same for every figure
@@ -23,20 +26,19 @@ from scipy.stats import chi2, binomtest
 DATA = "../data/results"
 FIGS = "../figures"
 
-# colours: red for the heart, blue-green for the kidney, grey for everything else
-RED = "#A8203A"
-TEAL = "#12707F"
-GREY = "#8A929B"
-LIGHT = "#D8DEE4"
+# Pastel scheme shared with the schematic figures (see palette.py).
+# The darker "line" colour is used for points and bar outlines so that
+# the marks stay readable; the pale "fill" colour is used for bar bodies.
+RED = palette.ROSE[1]          # heart / negative result
+RED_FILL = palette.ROSE[0]
+TEAL = palette.TEAL[1]         # kidney
+TEAL_FILL = palette.TEAL[0]
+GREEN = palette.SAGE[1]        # confirmed / positive
+GREEN_FILL = palette.SAGE[0]
+GREY = palette.STONE[1]        # neutral
+LIGHT = palette.STONE[0]
 
-plt.rcParams["font.family"] = "DejaVu Sans"
-plt.rcParams["font.size"] = 9
-plt.rcParams["axes.spines.top"] = False
-plt.rcParams["axes.spines.right"] = False
-plt.rcParams["axes.grid"] = True
-plt.rcParams["grid.alpha"] = 0.25
-plt.rcParams["grid.linewidth"] = 0.5
-plt.rcParams["figure.dpi"] = 300
+palette.apply_style()
 
 
 def save(fig, filename):
@@ -117,12 +119,12 @@ def figure2_organ_specificity():
     colours = []
     for i in range(len(top)):
         if top.loc[i, "id"] == "HP:0012210":
-            colours.append(TEAL)
+            colours.append(TEAL_FILL)
         else:
             colours.append(LIGHT)
 
     positions = np.arange(len(top))[::-1]
-    ax.barh(positions, top["OR"], color=colours, edgecolor=GREY, linewidth=0.4)
+    ax.barh(positions, top["OR"], color=colours, edgecolor=GREY, linewidth=0.7)
     names = []
     for i in range(len(top)):
         names.append(top.loc[i, "term"].replace("Abnormal ", "").replace(" morphology", ""))
@@ -300,14 +302,14 @@ def figure6_subcomplex():
     colours = []
     for value in enrichment:
         if value >= 4:
-            colours.append(RED)
+            colours.append(RED_FILL)
         elif value >= 2:
-            colours.append(TEAL)
+            colours.append(TEAL_FILL)
         else:
             colours.append(LIGHT)
 
     positions = np.arange(len(families))[::-1]
-    ax.barh(positions, enrichment, color=colours, edgecolor=GREY, linewidth=0.4)
+    ax.barh(positions, enrichment, color=colours, edgecolor=GREY, linewidth=0.7)
     ax.axvline(1, color="black", linestyle="--", linewidth=0.9)
     ax.text(1.06, 0.35, "no enrichment", fontsize=8, color="black")
     ax.set_yticks(positions)
@@ -339,8 +341,8 @@ def figure7_direction():
         negative = int((hits["BETA"] <= 0).sum())
         pvalue = binomtest(positive, positive + negative, 0.5, alternative="greater").pvalue
 
-        ax.bar([0, 1], [positive, negative], color=[RED, LIGHT],
-               edgecolor=GREY, linewidth=0.5, width=0.6)
+        ax.bar([0, 1], [positive, negative], color=[RED_FILL, LIGHT],
+               edgecolor=GREY, linewidth=0.8, width=0.6)
         ax.set_xticks([0, 1])
         ax.set_xticklabels(["worse kidney\nfunction", "better kidney\nfunction"], fontsize=8.5)
         ax.set_ylabel("Number of nominally significant results")
@@ -403,9 +405,9 @@ def figure9_sample_sizes():
     counts = [376624, 14086, 3385, 1386, 18]
 
     fig, ax = plt.subplots(figsize=(7, 3.6))
-    colours = [TEAL, TEAL, RED, RED, "#5B1020"]
+    colours = [TEAL_FILL, TEAL_FILL, RED_FILL, RED_FILL, palette.ROSE[1]]
     positions = np.arange(len(names))[::-1]
-    ax.barh(positions, counts, color=colours, edgecolor=GREY, linewidth=0.4)
+    ax.barh(positions, counts, color=colours, edgecolor=GREY, linewidth=0.7)
     ax.set_xscale("log")
     ax.set_yticks(positions)
     ax.set_yticklabels(names, fontsize=8.5)

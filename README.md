@@ -11,7 +11,7 @@ congenital kidney *malformation*, and the mechanism is ciliary.
 
 Everything here uses **public data only**. No UK Biobank application, no dbGaP, no login.
 
-> **Note on data versions.** This project has been re-analysed using the most recent releases of every resource available at the time of analysis (HPO 2026-06-23, gnomAD v4.1, MANE v1.5, FinnGen R10, MAGMA v1.10), rather than the versions current when the project was first conceived. Version numbers are stated throughout the thesis and in `docs/thesis.tex` Table 2 so that every result is exactly reproducible.
+> **Note on data versions.** This project has been re-analysed using the most recent releases of every resource available at the time of analysis (HPO 2026-06-23, gnomAD v4.1, MANE v1.5, FinnGen R10, MAGMA v1.10), rather than the versions current when the project was first conceived. Version numbers are stated throughout the thesis and in `docs/research_project_1.tex` Table 2 so that every result is exactly reproducible.
 
 
 ---
@@ -27,7 +27,7 @@ Everything here uses **public data only**. No UK Biobank application, no dbGaP, 
 | Excess of rare-variant hits at p<0.001, ciliary genes | 9.7× |
 | Direction of those hits | 59/60 toward worse kidney function, p = 5.3e-17 |
 
-The full write-up is [`docs/thesis.pdf`](docs/thesis.pdf) — 33 pages, 16 figures, with declaration, acknowledgements, lists of figures and tables, a graphical abstract and five supplementary sections.
+The full write-up is [`docs/research_project_1.pdf`](docs/research_project_1.pdf) — 33 pages, 16 figures, with declaration, acknowledgements, lists of figures and tables, a graphical abstract and five supplementary sections.
 
 ---
 
@@ -52,8 +52,8 @@ chd-ckd-genetics/
 │   └── results/           <- output tables
 ├── figures/               <- 16 PNG figures at 300 dpi
 ├── docs/
-│   ├── thesis.tex
-│   └── thesis.pdf
+│   ├── research_project_1.tex
+│   └── research_project_1.pdf
 └── rawdata/               <- created by 01_download_data.sh (not in git)
 ```
 
@@ -79,7 +79,7 @@ Then build the thesis:
 
 ```bash
 cd docs
-latexmk -pdf thesis.tex
+latexmk -pdf research_project_1.tex
 ```
 
 **Timing warning.** `08_run_magma.sh` step 2 took about 4 hours on a laptop. Everything
@@ -180,10 +180,3 @@ the registration form that later releases require. That is what made the LD scor
 possible.
 
 ---
-
-## A note on the references
-
-The reference list in `docs/thesis.tex` was compiled from memory of the literature and
-**every entry should be verified against the actual paper before submission** — volume,
-page and year details in particular. Two entries are marked as needing the original thesis
-reference list. This is a hard requirement, not a suggestion.

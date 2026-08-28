@@ -1,6 +1,6 @@
-% thesis.tex
-% Build with:  latexmk -pdf thesis.tex
-% or:          pdflatex thesis.tex  (run twice so references resolve)
+% research_project_1.tex
+% Build with:  latexmk -pdf research_project_1.tex
+% or:          pdflatex research_project_1.tex  (run twice so references resolve)
 
 \documentclass[11pt,a4paper]{article}
 
@@ -21,6 +21,18 @@
 \usepackage{setspace}
 \usepackage{tocloft}
 \usepackage{pdflscape}
+\usepackage{float}
+\usepackage[section]{placeins}
+% Let a page hold more float material before LaTeX defers it to a float page.
+% Without this, tables and figures drift several pages away from the text
+% that refers to them.
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
 \renewcommand{\cftfigpresnum}{Figure }
 \renewcommand{\cfttabpresnum}{Table }
 \setlength{\cftfignumwidth}{5.2em}
@@ -33,6 +45,8 @@
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
 \onehalfspacing
+\widowpenalty=10000
+\clubpenalty=10000
 
 \newcommand{\gene}[1]{\textit{#1}}
 
@@ -41,12 +55,12 @@
 % ======================================================================
 \begin{titlepage}
 \centering
-\vspace*{1.2cm}
+\vspace*{0.6cm}
 
 {\large\scshape The University of Manchester\par}
 \vspace{0.35cm}
 {\normalsize Faculty of Biology, Medicine and Health\par}
-\vspace{2.2cm}
+\vspace{1.5cm}
 
 \rule{\textwidth}{0.8pt}
 \vspace{0.7cm}
@@ -60,19 +74,19 @@
 {\large Do congenital heart disease and chronic kidney disease\\
 share a genetic basis?\par}
 
-\vspace{2.6cm}
+\vspace{1.8cm}
 {\large\bfseries Research Project 1\par}
 \vspace{0.4cm}
 {\normalsize BIOL61230\par}
 
-\vspace{2.2cm}
+\vspace{1.6cm}
 \begin{tabular}{r@{\hspace{1.2em}}l}
 \textit{Author:} & Jagadrupa Sahoo \\[0.45em]
 \textit{Supervisor:} & Dr David Talavera \\[0.45em]
 \textit{Programme:} & MSc Bioinformatics \\
 \end{tabular}
 
-\vspace{2.6cm}
+\vspace{1.8cm}
 {\normalsize 05 February 2022\par}
 
 \vfill
@@ -158,8 +172,8 @@ class carry a 9.7-fold excess of results at $p < 0.001$ after those genes are re
 10^{-17}$). Signal tracked intraflagellar transport and dynein-2 rather than the BBSome.
 Cross-trait LD score regression using CKDGen ($n \approx 981{,}000$) and FinnGen
 (4,270 CHD cases) found no genetic correlation between CHD and kidney function
-($r_g = -0.03$, $p = 0.67$) against a positive control of $r_g = -0.36$
-($p = 6.1 \times 10^{-11}$) for eGFR and CKD.
+($r_g = -0.05$, $p = 0.58$) against a positive control of $r_g = -0.36$
+($p = 2.0 \times 10^{-10}$) for eGFR and CKD.
 
 The conclusion is that CHD and CKD do not share Mendelian genetic architecture once
 syndromic pleiotropy is accounted for. The genuine shared axis is between CHD and congenital
@@ -213,7 +227,7 @@ affecting both organs \cite{sanagustin2016,reiter2017}. Several Mendelian syndro
 syndrome, the 22q11.2 deletion, Bardet--Biedl syndrome, nephronophthisis---feature cardiac and
 renal involvement together.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{figI1_two_hypotheses.png}
 \caption[Two explanations for CHD--CKD co-occurrence]{Two explanations for the same
@@ -230,7 +244,7 @@ many organs simultaneously. Any two organ systems will therefore appear to ``sha
 simply because syndromic genes are pleiotropic. Distinguishing a genuine cardiorenal axis from
 this generic background requires an explicit control (Figure~\ref{fig:pleiotropy}).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.92\textwidth]{figI2_pleiotropy_problem.png}
 \caption[The pleiotropy problem]{Why counting shared genes is not sufficient. A gene that
@@ -261,7 +275,7 @@ All analyses used publicly available data. No individual-level genotype data wer
 and no ethical approval was required. The overall workflow is shown in
 Figure~\ref{fig:workflow}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{figM1_workflow.png}
 \caption[Analysis workflow]{Analysis workflow. Four independent analyses were applied to the
@@ -279,7 +293,7 @@ Figures were produced with \texttt{matplotlib} using the Agg backend at 300~dpi.
 Gene-level association from summary statistics used MAGMA v1.10 \cite{deleeuw2015}.
 Table~\ref{tab:versions} lists every external resource with its version and access date.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \caption{External data resources, versions and access routes. All are public; none required
@@ -376,7 +390,7 @@ pooled test would guarantee a positive result that merely rediscovers autosomal 
 polycystic kidney disease, they were held out as a positive control and the remaining 31
 genes pre-specified as the primary set. Figure~\ref{fig:funnel} summarises the filtering.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{figM2_gene_filtering.png}
 \caption[Gene list filtering]{Construction of the candidate gene list, showing how many
@@ -496,7 +510,7 @@ median odds ratio across all organ systems was 3.76, so the kidney sits only 1.5
 a typical organ. Thumb (6.36), uvula (6.49), soft palate (6.80) and abdominal wall (6.53)
 morphology all overlap cardiac genes more strongly than the kidney does.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.86\textwidth]{fig02_organ_specificity.png}
 \caption{Overlap of congenital heart disease genes with each organ system. The kidney
@@ -516,7 +530,7 @@ After adjusting for the number of organ systems affected and the number of annot
 the two putative associations behave completely differently (Figure~\ref{fig:forest};
 Table~\ref{tab:forest}).
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \caption{Disease-level association between congenital heart disease and kidney phenotypes,
@@ -534,7 +548,7 @@ Chronic kidney disease    & Adjusted   & 0.95 & 0.73--1.23 & 0.68 \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{fig01_forest_adjusted_odds_ratios.png}
 \caption{Odds ratios with 95\% confidence intervals. The association with structural kidney
@@ -557,7 +571,7 @@ associations with kidney anomaly come from hypoplastic left heart syndrome (adju
 aortic valve (1.89), pulmonic stenosis (1.77), atrial septal defect (2.13)---sit at the bottom
 of the ranking.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{fig03_lesion_odds_ratios.png}
 \caption{Adjusted odds ratio for a structural kidney anomaly, by cardiac lesion. The ordering
@@ -572,7 +586,7 @@ observed enrichment gives roughly 18 (Figure~\ref{fig:samplesizes}). No burden t
 on 18 cases at any effect size. A continuous kidney measurement, by contrast, is available in
 376,624 participants.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{fig09_sample_sizes.png}
 \caption{Available sample sizes in UK Biobank. The comorbidity phenotype is not analysable;
@@ -589,7 +603,7 @@ Figure~\ref{fig:volcano}). The 31 recessive ciliopathy genes---\gene{NPHP1}, \ge
 \gene{CEP290}, the \gene{BBS} family, \gene{TMEM67}, \gene{MKS1}---reach nothing, exactly as
 the survivability argument predicts.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \caption{Exome-wide significant gene $\times$ renal phenotype associations, pLoF burden,
@@ -612,7 +626,7 @@ Gene & Phenotype & $p$ & $\beta$ \\
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{fig04_genebass_volcano.png}
 \caption{Gene-burden associations for the 37 ciliary genes across 20 renal phenotypes.
@@ -634,7 +648,7 @@ OR 3.20, $p = 1.6 \times 10^{-9}$). On congenital kidney malformation (Q63), 11 
 ciliary genes are nominally significant (31\%) against 6 of 126 non-ciliary genes (5\%,
 exactly chance).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig05_qq_ciliary_vs_other.png}
 \caption{Quantile--quantile plots of gene-burden $p$-values. Ciliary genes depart from the
@@ -652,7 +666,7 @@ an already-assembled cilium, sits at exactly the null expectation. This is not e
 statistical power: within the ciliary set, genes with more nominal hits do not have more
 qualifying variants (Mann--Whitney $p = 0.078$).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{fig06_subcomplex_enrichment.png}
 \caption{Enrichment of nominally significant renal associations by ciliary subcomplex.}
@@ -670,7 +684,7 @@ and pointing the wrong way, indicating a variance-driven SKAT-O result rather th
 consistent shift. The missense set averages around 370 variants per gene, most of them
 neutral, and dilutes rather than adds signal.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{fig07_direction_of_effect.png}
 \caption{Direction of effect among nominally significant results. Loss-of-function results
@@ -686,7 +700,7 @@ meta-analysis and a 1000 Genomes European reference panel, annotating 8.84 milli
 to 18,038 genes. A competitive gene-set test asks whether the candidate genes have smaller
 $p$-values than genes in general (Table~\ref{tab:magma}).
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \caption{MAGMA competitive gene-set analysis against estimated glomerular filtration rate.
@@ -725,7 +739,7 @@ different genes. \gene{PKD1} and \gene{PKD2} dominate the rare-variant axis;
 rare loss-of-function alleles and common regulatory variation act through different genes
 within the same pathway.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.72\textwidth]{fig11_rare_vs_common.png}
 \caption{Rare-variant burden evidence against common-variant gene-level evidence for the
@@ -738,15 +752,15 @@ same 37 ciliary genes. The two lines of evidence highlight different genes.}
 Cross-trait LD score regression gave estimated glomerular filtration rate a SNP heritability
 of 0.070 (SE 0.0044, $z = 16.0$), consistent with published estimates and confirming the
 estimator behaves correctly. The positive control performed as expected: eGFR and chronic
-kidney disease correlate at $r_g = -0.364$ (SE 0.056, $p = 6.1 \times 10^{-11}$), the
+kidney disease correlate at $r_g = -0.365$ (SE 0.057, $p = 2.0 \times 10^{-10}$), the
 negative sign being correct because higher eGFR means better kidney function.
 
 Against that benchmark, congenital heart disease shows no correlation with kidney function:
-$r_g = -0.034$ (SE 0.081, $p = 0.67$; Table~\ref{tab:ldsc}, Figure~\ref{fig:ldsc}). With this
+$r_g = -0.047$ (SE 0.084, $p = 0.58$; Table~\ref{tab:ldsc}, Figure~\ref{fig:ldsc}). With this
 standard error, genetic correlations larger than approximately 0.23 in absolute value can be
 excluded at 80\% power.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \caption{Cross-trait genetic correlations from LD score regression.}
@@ -755,15 +769,15 @@ excluded at 80\% power.
 \toprule
 Trait pair & $r_g$ & SE & $p$ & 95\% CI \\
 \midrule
-eGFR $\sim$ CKD (positive control) & $-0.364$ & 0.056 & $6.1\times10^{-11}$ & $-0.47, -0.26$ \\
-eGFR $\sim$ CHD                    & $-0.034$ & 0.081 & 0.67 & $-0.19, 0.13$ \\
-CHD $\sim$ CKD                     & $-0.244$ & 0.234 & 0.30 & $-0.70, 0.21$ \\
-CHD $\sim$ cystic kidney disease   & $-0.830$ & 0.851 & 0.33 & $-2.50, 0.84$ \\
+eGFR $\sim$ CKD (positive control) & $-0.365$ & 0.057 & $2.0\times10^{-10}$ & $-0.48, -0.25$ \\
+eGFR $\sim$ CHD                    & $-0.047$ & 0.084 & 0.58 & $-0.21, 0.12$ \\
+CHD $\sim$ CKD                     & $-0.275$ & 0.250 & 0.27 & $-0.77, 0.22$ \\
+CHD $\sim$ cystic kidney disease   & $-1.367$ & 1.395 & 0.33 & $-4.10, 1.37$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{fig08_ldsc_genetic_correlation.png}
 \caption{Genetic correlations with 95\% confidence intervals. Only the positive control
@@ -779,7 +793,7 @@ excludes zero.}
 Congenital heart disease and chronic kidney disease co-occur more often than chance in
 clinical cohorts. This study finds that the co-occurrence is not explained by shared
 Mendelian genetic architecture. Three independent lines of evidence agree: the adjusted
-disease-level odds ratio is 0.95, the genetic correlation is $-0.03$, and no non-cystogenic
+disease-level odds ratio is 0.95, the genetic correlation is $-0.05$, and no non-cystogenic
 gene reaches exome-wide significance for chronic renal failure.
 
 The most parsimonious interpretation is that chronic kidney disease in congenital heart
@@ -842,7 +856,7 @@ Third, the analysis is disease-level rather than patient-level. It measures whet
 aetiologies co-occur, not how often the two conditions co-occur in living patients.
 
 Fourth, the LD score regression involving congenital heart disease is underpowered. The
-heritability $z$-score for the FinnGen congenital heart disease endpoint is 2.12, below the
+heritability $z$-score for the FinnGen congenital heart disease endpoint is 1.97, below the
 conventional reliability threshold of 4. The bound excluding $|r_g| > 0.23$ is valid; a
 precise point estimate is not.
 
@@ -943,7 +957,7 @@ population stratification, and should be close to 1 in a well-controlled study. 
 below 1 for eGFR reflects genomic-control correction applied to the published CKDGen summary
 statistics.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \begin{tabular}{lrrrrr}
@@ -951,9 +965,9 @@ statistics.
 Trait & $h^2$ & SE & $z$ & Intercept & SNPs \\
 \midrule
 eGFR\_CKDGen & 0.0702 & 0.0044 & 15.98 & 0.894 & 1,176,043 \\
-CHD\_FinnGen & 0.0563 & 0.0265 & 2.12 & 1.018 & 1,172,981 \\
-CKD\_FinnGen & 0.0624 & 0.0142 & 4.39 & 1.044 & 1,172,976 \\
-CysticKidney\_FinnGen & 0.0412 & 0.1334 & 0.31 & 1.057 & 1,172,981 \\
+CHD\_FinnGen & 0.0526 & 0.0267 & 1.97 & 1.019 & 1,158,481 \\
+CKD\_FinnGen & 0.0596 & 0.0145 & 4.11 & 1.047 & 1,158,473 \\
+Cystic\_FinnGen & 0.0169 & 0.1351 & 0.13 & 1.059 & 1,158,476 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -963,7 +977,7 @@ CysticKidney\_FinnGen & 0.0412 & 0.1334 & 0.31 & 1.057 & 1,172,981 \\
 Twenty phenotypes were retrieved for each candidate gene: five continuous biomarkers and
 fifteen ICD-10 based endpoints. Case counts are those analysed by Genebass.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \begin{tabular}{llr}
@@ -1002,7 +1016,7 @@ disease count is the published electronic-health-record ascertainment; the kidne
 malformation count is the sum of the Q60, Q61 and Q63 first-occurrence fields analysed by
 Genebass.
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
 \small
 \begin{tabular}{lr}
