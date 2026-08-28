@@ -19,6 +19,12 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{pdflscape}
+\renewcommand{\cftfigpresnum}{Figure }
+\renewcommand{\cfttabpresnum}{Table }
+\setlength{\cftfignumwidth}{5.2em}
+\setlength{\cfttabnumwidth}{5.2em}
 
 \graphicspath{{../figures/}}
 \captionsetup{font=small,labelfont=bf,justification=raggedright,singlelinecheck=false}
@@ -35,24 +41,101 @@
 % ======================================================================
 \begin{titlepage}
 \centering
-\vspace*{3cm}
-{\LARGE\bfseries Shared Genetic Architecture of Congenital Heart Disease\\[0.3em]
-and Chronic Kidney Disease\par}
+\vspace*{1.2cm}
+
+{\large\scshape The University of Manchester\par}
+\vspace{0.35cm}
+{\normalsize Faculty of Biology, Medicine and Health\par}
+\vspace{2.2cm}
+
+\rule{\textwidth}{0.8pt}
+\vspace{0.7cm}
+
+{\LARGE\bfseries Towards a Mechanistic Explanation\\[0.35em] of CHD--CKD\par}
+
+\vspace{0.7cm}
+\rule{\textwidth}{0.8pt}
+
 \vspace{0.8cm}
-{\large A Reanalysis Using Curated Phenotype Ontologies and\\
-Public Genome-Wide Association Resources\par}
-\vspace{2.5cm}
-{\large Jagadrupa Sahoo\par}
-\vspace{1cm}
-{\normalsize MSc Bioinformatics\par}
-\vspace{2cm}
-{\normalsize \today\par}
+{\large Do congenital heart disease and chronic kidney disease\\
+share a genetic basis?\par}
+
+\vspace{2.6cm}
+{\large\bfseries Research Project 1\par}
+\vspace{0.4cm}
+{\normalsize BIOL61230\par}
+
+\vspace{2.2cm}
+\begin{tabular}{r@{\hspace{1.2em}}l}
+\textit{Author:} & Jagadrupa Sahoo \\[0.45em]
+\textit{Supervisor:} & Dr David Talavera \\[0.45em]
+\textit{Programme:} & MSc Bioinformatics \\
+\end{tabular}
+
+\vspace{2.6cm}
+{\normalsize 05 February 2022\par}
+
 \vfill
 \end{titlepage}
 
 % ======================================================================
+\newpage
+\section*{Declaration}
+\addcontentsline{toc}{section}{Declaration}
+
+I declare that this report is my own work. No portion of the work referred to in this
+report has been submitted in support of an application for another degree or qualification
+of this or any other university or other institute of learning.
+
+All data used in this project are publicly available and were obtained from the sources
+cited in Section~2. No individual-level human genotype data were accessed, and no ethical
+approval was required.
+
+Where the work of others has been used, it is acknowledged and referenced. Analysis code
+written for this project is available at
+\texttt{github.com/sahoo2000/chd-ckd-genetics}.
+
+\vspace{2cm}
+
+\begin{tabular}{@{}p{7cm}p{6cm}@{}}
+\rule{6.5cm}{0.4pt} & \rule{5.5cm}{0.4pt} \\
+Jagadrupa Sahoo & Date \\
+\end{tabular}
+
+\vspace{1.5cm}
+
+\subsection*{Copyright statement}
+
+The author of this report owns certain copyright or related rights in it (the
+``Copyright'') and has given The University of Manchester certain rights to use such
+Copyright, including for administrative purposes. Copies of this report, either in full or
+in extracts, may be made only in accordance with the Copyright, Designs and Patents Act
+1988 and regulations issued under it.
+
+% ======================================================================
+\newpage
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+I would like to thank my supervisor, Dr David Talavera, for his guidance throughout this
+project, and in particular for pressing me to test whether the gene overlap I first
+observed was specific to the kidney rather than a general property of syndromic genes. That
+question changed the direction of the work and became its central result.
+
+I am grateful to the teams behind the public resources this project depends on entirely:
+the Human Phenotype Ontology and Monarch Initiative, the HGNC, the Genome Aggregation
+Database, the Genebass team at the Broad Institute, the CKDGen Consortium, and FinnGen. It
+is worth recording that a project of this scope was possible on a laptop, without any
+controlled-access application, purely because these groups release their data openly.
+
+Finally I thank the participants of UK Biobank, FinnGen and the CKDGen cohorts, whose
+contribution underlies every result reported here.
+
+% ======================================================================
+\newpage
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
+
 
 Congenital heart disease (CHD) and chronic kidney disease (CKD) co-occur clinically, and
 this is widely assumed to reflect shared genetic causes. This study tested that assumption
@@ -90,6 +173,21 @@ Human Phenotype Ontology, gene burden testing, LD score regression, pleiotropy
 \tableofcontents
 \newpage
 
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\vspace{1.5em}
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\newpage
+
+\section*{Graphical Abstract}
+\addcontentsline{toc}{section}{Graphical Abstract}
+\vspace{1em}
+\begin{center}
+\includegraphics[width=\textwidth]{fig00_graphical_abstract.png}
+\end{center}
+\newpage
+
 % ======================================================================
 \section{Introduction}
 
@@ -115,11 +213,32 @@ affecting both organs \cite{sanagustin2016,reiter2017}. Several Mendelian syndro
 syndrome, the 22q11.2 deletion, Bardet--Biedl syndrome, nephronophthisis---feature cardiac and
 renal involvement together.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figI1_two_hypotheses.png}
+\caption[Two explanations for CHD--CKD co-occurrence]{Two explanations for the same
+clinical observation. Under (A) a single gene disrupts both organs during development, so
+the two conditions share genetic architecture. Under (B) the kidney is normal at birth and
+is damaged over decades by the consequences of the cardiac lesion and its treatment. These
+make opposite genetic predictions, which is what makes the question testable.}
+\label{fig:hypotheses}
+\end{figure}
+
 However, plausibility is not evidence, and a specific methodological hazard applies. Genes
 causing congenital malformation syndromes are typically developmental regulators that disrupt
 many organs simultaneously. Any two organ systems will therefore appear to ``share'' genes
 simply because syndromic genes are pleiotropic. Distinguishing a genuine cardiorenal axis from
-this generic background requires an explicit control.
+this generic background requires an explicit control (Figure~\ref{fig:pleiotropy}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figI2_pleiotropy_problem.png}
+\caption[The pleiotropy problem]{Why counting shared genes is not sufficient. A gene that
+disrupts early development affects many organs at once, so every pair of organs appears to
+share it. A simple overlap test cannot distinguish a genuine cardiorenal relationship from
+this background.}
+\label{fig:pleiotropy}
+\end{figure}
 
 \subsection{Aims}
 
@@ -139,7 +258,55 @@ This study asked three questions:
 \section{Methodology}
 
 All analyses used publicly available data. No individual-level genotype data were accessed,
-and no ethical approval was required.
+and no ethical approval was required. The overall workflow is shown in
+Figure~\ref{fig:workflow}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figM1_workflow.png}
+\caption[Analysis workflow]{Analysis workflow. Four independent analyses were applied to the
+same candidate gene list: a disease-level regression controlling for pleiotropy, a
+rare-variant burden lookup, cross-trait LD score regression, and a common-variant gene-set
+test.}
+\label{fig:workflow}
+\end{figure}
+
+\subsection{Software versions and computing environment}
+
+All analyses were run on macOS (Darwin 25.5.0, Apple Silicon) using Python 3.9.6 with
+\texttt{pandas} 1.x, \texttt{numpy}, \texttt{scipy} and \texttt{statsmodels} 0.14.6.
+Figures were produced with \texttt{matplotlib} using the Agg backend at 300~dpi.
+Gene-level association from summary statistics used MAGMA v1.10 \cite{deleeuw2015}.
+Table~\ref{tab:versions} lists every external resource with its version and access date.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{External data resources, versions and access routes. All are public; none required
+an application.}
+\label{tab:versions}
+\begin{tabular}{llll}
+\toprule
+Resource & Version / release & Content used & Access \\
+\midrule
+Human Phenotype Ontology & 2026-06-23 & \texttt{hp.obo}, 20,413 terms & Open (PURL) \\
+HPO annotations & 2026-06-23 & 332,599 gene--phenotype rows & Open (PURL) \\
+HGNC complete set & current & symbols, locus type, location & Open \\
+MANE Select & v1.5 & GRCh38 gene coordinates & NCBI FTP \\
+gnomAD constraint & v4.1 & pLI, LOEUF (MANE transcripts) & Google Cloud \\
+Genebass & 394,841 UKB exomes & SKAT-O, burden, ACAT & Open API \\
+CKDGen (Stanzick 2021) & European ancestry & eGFR, 8.84M variants & Direct download \\
+FinnGen & Release 10 & CHD, CKD, cystic kidney & Direct download \\
+1000 Genomes & Phase 3, EUR & LD reference for MAGMA & CTG Lab \\
+LD scores & \texttt{eur\_w\_ld\_chr} & 1,290,028 HapMap 3 SNPs & Zenodo \\
+MAGMA & v1.10 & gene and gene-set analysis & CTG Lab \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Analyses were re-run using the most recent releases of each resource available at the time
+of analysis rather than the versions current when the project was first conceived; version
+numbers are stated throughout so that any result can be reproduced exactly.
 
 \subsection{Curated gene--phenotype annotations}
 
@@ -202,7 +369,21 @@ insufficiency. Tier 1 (178 genes) required all three. Immune-mediated genes ente
 autoimmune disease (HLA loci, \gene{PTPN22}, \gene{STAT4}, \gene{MEFV}, \gene{IL6},
 \gene{IL10}, \gene{TLR4}, \gene{HFE}, \gene{SAA1}, \gene{TNXB}) were removed as
 mechanistically distinct, giving 169 genes. A 37-gene ciliary subset was defined from the
-ciliopathy, nephronophthisis and polycystic kidney disease mechanism classes.
+ciliopathy, nephronophthisis and polycystic kidney disease mechanism classes. Six of these
+are already established causes of cystic kidney disease (\gene{PKD1}, \gene{PKD2},
+\gene{IFT140}, \gene{ALG9}, \gene{GANAB}, \gene{DNAJB11}); because including them in a
+pooled test would guarantee a positive result that merely rediscovers autosomal dominant
+polycystic kidney disease, they were held out as a positive control and the remaining 31
+genes pre-specified as the primary set. Figure~\ref{fig:funnel} summarises the filtering.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth]{figM2_gene_filtering.png}
+\caption[Gene list filtering]{Construction of the candidate gene list, showing how many
+genes were removed at each step and why. Bar widths are proportional to
+$\log_{10}(n)$.}
+\label{fig:funnel}
+\end{figure}
 
 \subsection{Gene burden statistics from exome sequencing}
 
@@ -244,13 +425,61 @@ Because the reference implementation requires Python 2, which no longer installs
 estimator was reimplemented; it was validated against a published heritability estimate and
 against a positive control trait pair before the results below were interpreted.
 
-\subsection{Software and statistics}
+\subsection{Common-variant gene and gene-set analysis}
 
-Analyses used Python 3.9 with \texttt{pandas}, \texttt{numpy}, \texttt{scipy} and
-\texttt{statsmodels}. Gene-level association from summary statistics used MAGMA v1.10
-\cite{deleeuw2015}. Multiple testing was handled by Bonferroni correction where stated and
-otherwise by the Benjamini--Hochberg procedure \cite{benjamini1995}. All code is available in
-the accompanying repository.
+Gene-level association was computed with MAGMA v1.10 \cite{deleeuw2015} from the CKDGen
+European-ancestry eGFR meta-analysis. SNP identifiers, chromosomes and build-37 positions
+were extracted for all 8,842,706 variants carrying an rs identifier. SNPs were assigned to
+genes using the NCBI37.3 gene location file with a zero-kilobase window, so only variants
+within the transcribed region contribute; 18,038 of 19,427 genes received at least one SNP.
+Gene $p$-values used the default SNP-wise mean model with the 1000 Genomes Phase 3 European
+panel (503 individuals) as LD reference.
+
+Gene-set analysis used MAGMA's competitive test, which asks whether genes in a set have
+smaller $p$-values than genes outside it, conditioning internally on gene size, gene
+density, sample size and minor allele count together with the logarithms of each. Four sets
+were tested: all 37 ciliary genes, the 31 with cystogenic genes removed, the 6 cystogenic
+genes alone, and the 166 Tier 1 genes with a gene-location entry. Gene symbols were mapped
+to Entrez identifiers through HGNC; all four sets mapped completely.
+
+\subsection{Multiple testing}
+
+Three correction strategies were used, chosen to match each question.
+
+For the HPO organ-specificity screen (194 tests) and the disease-level regressions, results
+are reported with exact confidence intervals and $p$-values without correction, because the
+comparison of interest is between two pre-specified models rather than a search across many.
+
+For the gene-burden lookups, two thresholds are quoted: Bonferroni across the tests
+performed ($0.05/706 = 7.1\times10^{-5}$ for the ciliary set,
+$0.05/3226 = 1.5\times10^{-5}$ for Tier 1), and the conventional exome-wide threshold for
+gene-based tests of $2.5\times10^{-6}$. Benjamini--Hochberg $q$-values
+\cite{benjamini1995} are additionally reported. The Benjamini--Hochberg step-up procedure is
+implemented as $q_{(i)} = \min_{j \geq i}\left(\frac{n}{j}p_{(j)}\right)$, evaluated by a
+cumulative minimum running from the largest $p$-value downwards; the implementation was
+checked against \texttt{statsmodels.stats.multitest}.
+
+For the MAGMA gene-set analysis, four sets were tested and no result survives Bonferroni
+correction at $0.05/4 = 0.0125$.
+
+\subsection{Directional testing}
+
+Because individual genes in the candidate set are underpowered, a test with greater
+sensitivity was applied. Among gene $\times$ phenotype results with $p < 0.05$, the
+proportion with a positive burden effect (indicating worse kidney function) was compared
+against 0.5 with an exact binomial test. This is valid despite selection on $p$: under the
+null hypothesis the sign of an effect estimate is independent of its magnitude, so selected
+results remain equally likely to point either way. An empirical null was also constructed by
+drawing 200,000 samples from $\mathrm{Binomial}(n, 0.5)$ to confirm the analytic $p$-value.
+
+\subsection{Reproducibility}
+
+All analysis code is available at \texttt{github.com/sahoo2000/chd-ckd-genetics}, organised
+as numbered scripts to be run in order. Every result table and figure in this report is
+regenerated by that code from the public sources in Table~\ref{tab:versions}. Intermediate
+result files are included in the repository so that figures can be redrawn without
+repeating the slow steps; the MAGMA gene analysis in particular takes approximately four
+hours.
 
 % ======================================================================
 \section{Results}
@@ -641,6 +870,169 @@ measurement available in the whole cohort rather than a rare binary comorbidity,
 Biobank would comprise approximately 18 individuals.
 
 % ======================================================================
+
+% ======================================================================
+\newpage
+\appendix
+\section{Supplementary Information}
+\addcontentsline{toc}{section}{Supplementary Information}
+
+\subsection*{S1. The 37 ciliary candidate genes}
+
+Genes causing both a cardiac and a kidney malformation and assigned to a ciliopathy,
+nephronophthisis or polycystic kidney disease mechanism class. \textit{n} columns give the
+number of distinct diseases supporting each phenotype. pLI and LOEUF are gnomAD v4.1
+loss-of-function constraint metrics; lower LOEUF indicates greater intolerance. The six
+genes in bold are the established cystogenic genes held out as a positive control.
+
+\begin{longtable}{llccccrr}
+\toprule
+Gene & Ensembl & Chr & $n$ cardiac & $n$ kidney & $n$ CKD & pLI & LOEUF \\
+\midrule
+\endfirsthead
+\toprule
+Gene & Ensembl & Chr & $n$ cardiac & $n$ kidney & $n$ CKD & pLI & LOEUF \\
+\midrule
+\endhead
+AHI1 & ENSG00000135541 & 6 & 3 & 1 & 1 & 0.00 & 1.07 \\
+\textbf{ALG9} & ENSG00000086848 & 11 & 4 & 4 & 1 & 0.00 & 0.85 \\
+ANKS6 & ENSG00000165138 & 9 & 1 & 1 & 1 & 0.00 & 0.87 \\
+BBIP1 & ENSG00000214413 & 10 & 1 & 1 & 2 & 0.07 & 1.69 \\
+BBS1 & ENSG00000174483 & 11 & 2 & 1 & 1 & 0.00 & 1.00 \\
+BBS10 & ENSG00000179941 & 12 & 1 & 2 & 2 & 0.00 & 1.42 \\
+BBS12 & ENSG00000181004 & 4 & 1 & 2 & 1 & 0.00 & 1.42 \\
+BBS2 & ENSG00000125124 & 16 & 2 & 3 & 2 & 0.00 & 0.89 \\
+BBS4 & ENSG00000140463 & 15 & 1 & 2 & 1 & 0.00 & 0.95 \\
+BBS5 & ENSG00000163093 & 2 & 1 & 1 & 1 & 0.00 & 0.88 \\
+BBS7 & ENSG00000138686 & 4 & 1 & 1 & 1 & 0.00 & 0.70 \\
+BBS9 & ENSG00000122507 & 7 & 1 & 1 & 2 & 0.00 & 0.96 \\
+CC2D2A & ENSG00000048342 & 4 & 1 & 4 & 3 & 0.00 & 0.85 \\
+CEP290 & ENSG00000198707 & 12 & 3 & 5 & 6 & 0.00 & 1.09 \\
+\textbf{DNAJB11} & ENSG00000090520 & 3 & 1 & 2 & 2 & 0.00 & 0.93 \\
+DYNC2I1 & ENSG00000126870 & 7 & 1 & 2 & 1 & 0.00 & 0.80 \\
+\textbf{GANAB} & ENSG00000089597 & 11 & 1 & 2 & 1 & 1.00 & 0.39 \\
+IFT122 & ENSG00000163913 & 3 & 1 & 1 & 1 & 0.00 & 0.81 \\
+\textbf{IFT140} & ENSG00000187535 & 16 & 3 & 5 & 5 & 0.00 & 0.97 \\
+IFT172 & ENSG00000138002 & 2 & 3 & 3 & 3 & 0.00 & 0.74 \\
+INVS & ENSG00000119509 & 9 & 1 & 2 & 2 & 0.00 & 0.94 \\
+LZTFL1 & ENSG00000163818 & 3 & 2 & 2 & 2 & 0.00 & 0.87 \\
+MKKS & ENSG00000125863 & 20 & 2 & 4 & 1 & 0.00 & 1.11 \\
+MKS1 & ENSG00000011143 & 17 & 5 & 3 & 1 & 0.00 & 0.99 \\
+NEK8 & ENSG00000160602 & 17 & 3 & 5 & 4 & 0.00 & 0.83 \\
+NPHP1 & ENSG00000144061 & 2 & 1 & 5 & 6 & 0.00 & 0.92 \\
+NPHP3 & ENSG00000113971 & 3 & 2 & 6 & 5 & 0.00 & 0.87 \\
+\textbf{PKD1} & ENSG00000008710 & 16 & 2 & 2 & 2 & 1.00 & 0.36 \\
+\textbf{PKD2} & ENSG00000118762 & 4 & 2 & 2 & 2 & 0.00 & 0.68 \\
+RPGRIP1L & ENSG00000103494 & 16 & 1 & 5 & 4 & 0.00 & 0.91 \\
+SDCCAG8 & ENSG00000054282 & 1 & 1 & 4 & 3 & 0.00 & 0.84 \\
+TMEM216 & ENSG00000187049 & 11 & 2 & 4 & 2 & 0.00 & 1.45 \\
+TMEM231 & ENSG00000205084 & 16 & 2 & 4 & 1 & 0.00 & 1.41 \\
+TMEM237 & ENSG00000155755 & 2 & 3 & 2 & 2 & 0.00 & 1.32 \\
+TMEM67 & ENSG00000164953 & 8 & 2 & 9 & 7 & 0.00 & 1.08 \\
+TTC8 & ENSG00000165533 & 14 & 2 & 2 & 1 & 0.00 & 0.80 \\
+ZNF423 & ENSG00000102935 & 16 & 1 & 1 & 1 & 1.00 & 0.20 \\
+\bottomrule
+\end{longtable}
+
+\subsection*{S2. SNP heritability estimates}
+
+Observed-scale SNP heritability from LD score regression. The $z$-score is the heritability
+divided by its standard error; values below 4 indicate that genetic correlations involving
+that trait should be treated as underpowered. The intercept estimates confounding from
+population stratification, and should be close to 1 in a well-controlled study. The value
+below 1 for eGFR reflects genomic-control correction applied to the published CKDGen summary
+statistics.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Trait & $h^2$ & SE & $z$ & Intercept & SNPs \\
+\midrule
+eGFR\_CKDGen & 0.0702 & 0.0044 & 15.98 & 0.894 & 1,176,043 \\
+CHD\_FinnGen & 0.0563 & 0.0265 & 2.12 & 1.018 & 1,172,981 \\
+CKD\_FinnGen & 0.0624 & 0.0142 & 4.39 & 1.044 & 1,172,976 \\
+CysticKidney\_FinnGen & 0.0412 & 0.1334 & 0.31 & 1.057 & 1,172,981 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{S3. Renal phenotypes queried in Genebass}
+
+Twenty phenotypes were retrieved for each candidate gene: five continuous biomarkers and
+fifteen ICD-10 based endpoints. Case counts are those analysed by Genebass.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{llr}
+\toprule
+Type & Phenotype & $n$ \\
+\midrule
+Continuous & Creatinine & 376,624 \\
+Continuous & Cystatin C & 376,784 \\
+Continuous & Urea & 376,551 \\
+Continuous & Creatinine (enzymatic) in urine & 383,774 \\
+Continuous & Microalbumin in urine & 119,013 \\
+\midrule
+ICD-10 & N18 chronic renal failure & 14,086 \\
+ICD-10 & N17 acute renal failure & 7,312 \\
+ICD-10 & N20 calculus of kidney and ureter & 5,879 \\
+ICD-10 & N28 other disorders of kidney and ureter & 5,275 \\
+ICD-10 & N23 unspecified renal colic & 4,304 \\
+ICD-10 & N19 unspecified renal failure & 2,345 \\
+ICD-10 & I12 hypertensive renal disease & 1,513 \\
+ICD-10 & C64 malignant neoplasm of kidney & 985 \\
+ICD-10 & Q61 cystic kidney disease & 735 \\
+ICD-10 & N08 glomerular disorders in diseases classified elsewhere & 531 \\
+ICD-10 & Q63 other congenital malformations of kidney & 452 \\
+ICD-10 & N04 nephrotic syndrome & 242 \\
+ICD-10 & Q60 renal agenesis and reduction defects & 199 \\
+ICD-10 & N26 unspecified contracted kidney & 176 \\
+ICD-10 & N25 disorders from impaired renal tubular function & 160 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{S4. Sample sizes underlying the power calculations}
+
+UK Biobank counts used in Section~3.3 and Figure~\ref{fig:samplesizes}. The congenital heart
+disease count is the published electronic-health-record ascertainment; the kidney
+malformation count is the sum of the Q60, Q61 and Q63 first-occurrence fields analysed by
+Genebass.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lr}
+\toprule
+Phenotype & $n$ \\
+\midrule
+Participants with a creatinine measurement & 376,624 \\
+Chronic kidney disease (N18) & 14,086 \\
+Congenital heart disease (Q20--Q26) & 3,385 \\
+Congenital kidney malformation (Q60, Q61, Q63) & 1,386 \\
+Expected co-occurrence if independent & $\approx$ 10 \\
+Expected co-occurrence at the observed OR of 1.77 & $\approx$ 18 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{S5. Data and code availability}
+
+All data are public and required no application. Analysis code, gene lists, result tables
+and the source for every figure in this report are available at
+\texttt{github.com/sahoo2000/chd-ckd-genetics}. Resource versions are listed in
+Table~\ref{tab:versions}.
+
+A complete regenie \cite{mbatchou2021} pipeline for individual-level UK Biobank analysis is
+included in the repository but was \emph{not} executed, as this project had no
+individual-level access. It is retained because the gene sets and analysis logic are
+access-independent. Its Python components were verified against synthetic data; its shell
+components have never been run against real genotype data. This is stated in the repository
+documentation and should not be presented as executed work.
+
 \newpage
 \begin{thebibliography}{99}
 \small

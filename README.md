@@ -1,4 +1,7 @@
-# Shared Genetic Architecture of Congenital Heart Disease and Chronic Kidney Disease
+# Towards a Mechanistic Explanation of CHD-CKD
+
+**Research Project 1 (BIOL61230)** — MSc Bioinformatics, The University of Manchester
+Supervisor: Dr David Talavera
 
 Do congenital heart disease (CHD) and chronic kidney disease (CKD) share genetic causes?
 
@@ -7,6 +10,9 @@ organs at once, the apparent link disappears. What *does* share genetics with CH
 congenital kidney *malformation*, and the mechanism is ciliary.
 
 Everything here uses **public data only**. No UK Biobank application, no dbGaP, no login.
+
+> **Note on data versions.** This project has been re-analysed using the most recent releases of every resource available at the time of analysis (HPO 2026-06-23, gnomAD v4.1, MANE v1.5, FinnGen R10, MAGMA v1.10), rather than the versions current when the project was first conceived. Version numbers are stated throughout the thesis and in `docs/thesis.tex` Table 2 so that every result is exactly reproducible.
+
 
 ---
 
@@ -21,7 +27,7 @@ Everything here uses **public data only**. No UK Biobank application, no dbGaP, 
 | Excess of rare-variant hits at p<0.001, ciliary genes | 9.7× |
 | Direction of those hits | 59/60 toward worse kidney function, p = 5.3e-17 |
 
-The full write-up is [`docs/thesis.pdf`](docs/thesis.pdf) (18 pages, 11 figures).
+The full write-up is [`docs/thesis.pdf`](docs/thesis.pdf) — 33 pages, 16 figures, with declaration, acknowledgements, lists of figures and tables, a graphical abstract and five supplementary sections.
 
 ---
 
@@ -39,11 +45,12 @@ chd-ckd-genetics/
 │   ├── 06_ldsc.py
 │   ├── 07_make_figures.py
 │   ├── 08_run_magma.sh
+│   ├── 09_make_schematic_figures.py
 │   └── regenie_ukb/                <- unused, see note below
 ├── data/
 │   ├── genes/             <- the candidate gene lists
 │   └── results/           <- output tables
-├── figures/               <- 11 PNG figures at 300 dpi
+├── figures/               <- 16 PNG figures at 300 dpi
 ├── docs/
 │   ├── thesis.tex
 │   └── thesis.pdf
@@ -112,7 +119,10 @@ and no longer installs, so this reimplements the published estimator. **It was v
 against a published heritability estimate and a positive control before use, but it is not
 the reference binary — say so if you publish this.**
 
-**`07_make_figures.py`** — draws all 11 figures.
+**`07_make_figures.py`** — draws the 11 data figures.
+
+**`09_make_schematic_figures.py`** — draws the graphical abstract and the introduction and
+methods diagrams.
 
 **`08_run_magma.sh`** — gene-level and gene-set association from the CKDGen GWAS.
 
